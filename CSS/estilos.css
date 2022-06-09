@@ -1,0 +1,1332 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', cursive;
+}
+
+body{
+    display: grid;
+    color: white;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    height: 100%;
+}
+
+/* ENCABEZADO DONDE ESTAN EL LOGO Y NAV */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background: rgb(65,7,106);
+background: -moz-linear-gradient(87deg, rgba(65,7,106,1) 0%, rgba(107,30,132,1) 47%, rgba(25,0,62,1) 100%);
+background: -webkit-linear-gradient(87deg, rgba(65,7,106,1) 0%, rgba(107,30,132,1) 47%, rgba(25,0,62,1) 100%);
+background: linear-gradient(87deg, rgba(65,7,106,1) 0%, rgba(107,30,132,1) 47%, rgba(25,0,62,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#41076a",endColorstr="#19003e",GradientType=1);
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    grid-area: header;
+}
+
+/*LOGO*/
+.header__logo img{
+    position: relative;
+    top: 5px;
+    right: 4px;
+    transform: rotate(160deg);
+    image-rendering:optimizeQuality;
+    margin-left: 10px;
+
+
+}
+
+.header__logo{
+    display: flex;
+}
+
+.header__logo h1{
+    color: white;
+    font-size: 1.8rem;
+    position: relative;
+    right: 6px;
+}
+
+.header__logo a{
+    text-decoration: none;
+}
+
+/* BARRA NAVEGADOR */
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+ul li{
+    margin: 10px;
+    font-size: 1rem;
+}
+
+li a{
+    text-decoration: none;
+    color:white;
+}
+
+li a:hover{
+    color: gray;
+}
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------------- */
+
+
+/* PAGINA INDEX */
+
+.hero{
+    display: grid;
+    grid-area: main;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "titulo titulo titulo"
+    "carta carta carta"
+    "carta carta carta";
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    gap: 10px;
+    background: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url(../imagenes/imagenhero.jpg);
+    background-size: cover;
+    padding: 5rem;
+}
+
+/* TITULO PRINCIPAL*/ 
+
+.contenedor__imagenlogo{
+    grid-area: titulo;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    height: auto;
+}
+
+
+.titulo__hero1{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.titulo__hero1 h2{
+    text-shadow: 1px 1px 10px black;
+    display: flex;
+    align-items: center;
+}
+
+.titulo__hero2{
+    display: flex;
+    align-items: center;
+}
+
+.titulo__hero2 h2{
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 10px black;
+    letter-spacing: 1px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+
+
+
+
+/* BOTON SIN USAR
+
+button{
+    display: inline-block;
+    padding: 0.4rem;
+    border-radius: 10%;
+    width: 15%;
+    margin: 10px;
+    font-weight: bold;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+*/
+
+
+
+
+/* CARTAS RECITALES MODIFICACION GENERAL */
+
+
+/* CONTENEDOR CARTAS */
+.contenedor__cartas{
+grid-area: carta;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+grid-template-areas:
+"carta1 carta2 publicidad"
+"carta3 carta4 publicidad";
+height: 50vh;
+width: 100%;
+gap: 5px;
+}
+
+.cartas{
+    display: flex;
+    box-shadow: 0 2px 2px black;
+    border: 0px solid black;
+    width: 100%;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+/* CARTAS INDIVIDUALES */
+
+/* CARTA 1 */
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#carta1{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url(../imagenes/Recital1.png);
+    background-size: cover;
+    font-size: 2rem;
+    grid-area: carta1;
+}
+
+#carta1 a{
+    text-decoration: none;
+    color: white;
+ 
+}
+
+#carta1:hover{
+    transform: scale(1.1);
+}
+
+#carta1 h3{
+    text-shadow: 0.5px 0.5px 1px black;
+}
+
+/* CARTA 2 */
+
+#carta2{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url(../imagenes/Recital2.jpg);
+    background-size: cover;
+    font-size: 2rem;
+    text-shadow: 0px 0px 5px grey;
+    grid-area: carta2;
+
+}
+
+#carta2 h3{
+    text-shadow: 1px 1px 1px black;
+}
+
+#carta2 a{
+    text-decoration: none;
+    color: white;
+}
+
+#carta2:hover{
+    transform: scale(1.1);
+    }
+
+/* CARTA 3 */
+
+#carta3{
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url(../imagenes/Recital3.jpg);
+    background-size: cover;
+    font-size: 2rem;
+    grid-area: carta3;
+
+}
+
+#carta3 h3{
+    text-shadow: 1px 1px 1px black;
+}
+#carta3 a{
+    text-decoration: none;
+    color: white;
+}
+
+#carta3:hover{
+transform: scale(1.1);
+}
+
+/* CARTA 4 */
+
+#carta4{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url(../imagenes/Recital4.jpg);
+    background-size: cover;
+    font-size: 2rem;
+    text-shadow: 0px 0px 5px grey;
+    grid-area: carta4;
+}
+
+#carta4 h3{
+    text-shadow: 1px 1px 1px black;
+}
+
+#carta4 a{
+    text-decoration: none;
+    color: white;
+}
+
+#carta4:hover{
+      transform: scale(1.1);
+}
+
+
+/* PUBLICIDAD */
+.publicidad{
+    display: flex;
+    flex-direction: column;
+    grid-area: publicidad;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.2)
+    ),url(../imagenes/Aside.jpg);
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 10px white (0,0,0,1);
+    border-radius: 10px;
+    box-shadow: 0 2px 2px black;
+}
+
+.publicidad h3{
+    text-shadow: 1px 1px 1px black;
+}
+
+.publicidad:hover{
+    transform: scale(1.1);
+}
+
+.publicidad__titulo{
+    color: white;  
+    font-size: 3rem;
+    text-shadow: 0px 0px 5px grey;
+}
+
+.publicidad__titulo a{
+    text-decoration: none;
+    color: white;
+}
+
+/* FOOTER PARA TODOS LOS ENLACES */
+footer{
+    display: flex;
+    grid-area: footer;
+    height: 3rem;
+    background: rgb(65,7,106);
+background: -moz-linear-gradient(87deg, rgba(65,7,106,1) 0%, rgba(107,30,132,1) 47%, rgba(25,0,62,1) 100%);
+background: -webkit-linear-gradient(87deg, rgba(65,7,106,1) 0%, rgba(107,30,132,1) 47%, rgba(25,0,62,1) 100%);
+background: linear-gradient(87deg, rgba(65,7,106,1) 0%, rgba(107,30,132,1) 47%, rgba(25,0,62,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#41076a",endColorstr="#19003e",GradientType=1);
+    justify-content: center;
+    font-size: 1rem;
+}
+
+footer h3{
+    padding: 10px;
+    color: white;
+}
+  
+
+
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+
+
+
+
+
+
+
+
+/* PAGINA CONTACTO*/
+
+.contacto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "titulo1 titulo1"
+    "imagenes lista"
+    "imagenes lista";
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url(../imagenes/aboutUs.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+/* TITULO 1 PRINCIPAL */
+
+.contacto__titulo1{
+    grid-area: titulo1;
+    justify-self: center;
+    align-self: center;
+}
+
+.contacto__titulo1 h2{
+    font-size: 4.5rem;
+    text-shadow: 4px 1px 1px black;
+    
+}
+
+.animate__jackInTheBox{
+    animation-duration: 3s;
+}
+
+
+/* IMAGENES COSTADO */
+.contacto__imagenes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-area: imagenes;
+    grid-gap: 10px;
+    width: 100%;
+    padding: 40px;
+}
+
+.contacto__imagenes img{
+    border-radius: 10px;
+    box-shadow: 0 2px 2px black;
+}
+
+/* FORMULARIO */
+
+.contacto_form_lista{
+    grid-area: lista;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+.contacto_form_lista ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    list-style: none;
+    height:max-content;
+    gap: 10px;
+}
+
+ul li{
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+
+
+
+
+
+
+/* ABOUT US */
+
+.aboutus{
+    width: 100%;
+    background:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(../imagenes/imagencontact.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "imagen1 imagen1"
+    "parrafo parrafo"
+    "imagen2 imagen2"
+    "titulo titulo";
+    overflow: hidden;
+    padding: 30px;
+}
+
+
+.about_parrafo{
+    display: flex;
+    grid-area: parrafo;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+
+}
+
+.about_parrafo_principal{
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* CONTENEDOR LOGO Y HR */
+
+.about_contenedor_logo{
+    display: flex;
+    flex-direction: row;
+    grid-area: imagen1;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+
+.about_logo{
+    position: relative;
+    left: 220px;
+}
+
+
+.about_contenedor_fraselogo{
+    position: relative;
+    left: 240px;
+}
+
+
+.postparrafo{
+    border: 0;
+    border-top: 2px solid #999; 
+    border-bottom: 0px solid rgb(230, 218, 218);
+    width: 500px;
+}
+
+.aboutus hr{
+    grid-area: imagen1;
+    border: 0;
+    border-top: 2px solid #999; 
+    border-bottom: 0px solid rgb(230, 218, 218);
+    width: 500px;
+    position: relative;
+    top: 100px;
+    right: 100px;
+
+}
+
+
+
+/* LOGOS BANDAS IMAGEN2*/
+
+.about_contenedor_bandas{
+    grid-area: imagen2;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas: 
+    "collab collab"
+    "banda1 banda2"
+    "banda3 banda4"
+    "banda5 banda6";
+    padding: 10px;
+    
+}
+
+.about_colab_titulo2{
+    grid-area: collab;
+    display: flex;
+    flex-direction: column;
+    padding: 1px;
+    font-size: 2rem;
+    text-shadow: 10px 5px 5px black;
+    align-self: center;
+    justify-self: center;
+   
+}
+
+
+
+/* IMAGENES COLABORACIONES */
+
+.imagencolab1{
+    grid-area: banda1;
+    justify-self: center;
+
+}
+
+.imagencolab2{
+    grid-area: banda2;
+    justify-self: center;
+
+}
+
+.imagencolab3{
+    grid-area: banda3;
+    justify-self: center;
+
+}
+
+.imagencolab4{
+    grid-area: banda4;
+    justify-self: center;
+    padding: 10px;
+
+}
+
+.imagencolab5{
+    grid-area: banda5;
+    justify-self: center;
+
+}
+
+.imagencolab6{
+    grid-area: banda6;
+    justify-self: center;
+
+}
+
+/* TITULO FINAL */
+.contenedor_about_titulo{
+    grid-area: titulo;
+    justify-items: center;
+    align-self: center;
+}
+
+.contenedor_about_titulo h3{
+    text-align: center;
+    font-size: 4.5rem;
+    text-shadow: 5px 5px 5px black;
+}
+
+
+.animate__bounce{
+    animation-duration: 8s;
+}
+
+
+
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+
+
+
+
+
+
+/*NEXT CONCERT */
+
+/* MAIN NEXT CONCERT */
+
+.next-concert{
+    background: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0, 0.3)
+    ), url(../imagenes/nextconcert.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: optimizeQuality;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "titulo fechas"
+    "exp fechas"
+    ;
+}
+
+/*-----*/
+/* TITULO */
+/* CONTENEDOR GENERAL TITULO*/
+
+.nextconcert__titulo{
+    grid-area: titulo;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+/* CONTENEDOR GENERAL H1*/
+
+.nextconcert__titulo h1{
+    font-size: 6rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.nextconcert_contenedor_logo{
+    grid-area: titulo;
+    max-width: 100%;
+  height: auto;
+    
+}
+
+/* EXPERIENCIAS */
+/*
+.nextconcert__exp{
+    grid-area: exp;
+    display: flex;
+    text-align: center;
+    gap: 10px;
+    padding-bottom: 100px;
+    padding: 10px;
+}
+
+.nextconcert__exp__cuadros{
+    border: 0px solid black;
+    align-self: center;
+    border-radius: 81px 157px 81px 0px / 66px 30px 43px 0px;
+    background: rgb(202,200,204);
+    background: -moz-radial-gradient(circle, rgba(202,200,204,1) 0%, rgba(219,174,233,0.28644961402529767) 86%, rgba(141,112,184,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(202,200,204,1) 0%, rgba(219,174,233,0.28644961402529767) 86%, rgba(141,112,184,1) 100%);
+    background: radial-gradient(circle, rgba(202,200,204,1) 0%, rgba(219,174,233,0.28644961402529767) 86%, rgba(141,112,184,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cac8cc",endColorstr="#8d70b8",GradientType=1);
+}
+
+
+.nextconcert__exp p{
+    font-weight: lighter;
+    font-style: italic;
+    padding: 20px;
+    color: white;
+}
+
+
+/*-----*/
+/*-----*/
+/* CONTENEDOR GENERAL CALENDARIO */
+
+.nextconcert__fechas{
+    grid-area: fechas;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+/* CALENDARIO */
+
+/* TITULO CALENDARIO */
+
+.next__fechas__titulo{
+    text-align: center;
+    padding: 40px;
+    display: block;
+    font-size: 2rem;
+    text-shadow: 1px 2px 2px black;
+    padding-bottom: 10px;
+}
+
+
+/* NOMBRE DIAS */
+
+.nombre__dias{
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 2px 2px black;
+}
+
+/* LISTA NUMEROS CALENDARIO */
+
+.nextconcert__fechas ol{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: right;
+    text-shadow: 1px 2px 2px black;
+}
+
+.nextconcert__fechas li{
+    padding: 0px;
+}
+
+/* ORDENAR EL PRIMER DIA JUNIO*/
+
+.primer_dia_junio{
+    grid-column-start: 3;
+}
+
+
+
+/* DIVS CALENDARIO */
+
+
+.nextconcert__fecha__calendario1{
+    text-align: center;
+    border: 0px solid black;
+    padding: 7px;
+    border-radius: 21px;
+    text-shadow: 1px 2px 2px black;
+    box-shadow: 1px 1px 161px 10px rgba(0,0,0,1);
+}
+
+.nextconcert__fecha__calendario1 h3{
+    padding-bottom: 15px;
+}
+
+
+.nextconcert__fecha__calendario2{
+    text-align: center;
+    border: 0px solid black;
+    padding: 7px;
+    border-radius: 21px;
+    text-shadow: 1px 2px 2px black;
+    box-shadow: 1px 1px 161px 10px rgba(0,0,0,1);
+}
+
+.primer_dia_julio{
+    grid-column-start: 5;
+}
+
+.nextconcert__fecha__calendario2 h3{
+    padding-bottom: 15px;
+}
+
+.nextconcert__fecha__calendario3{
+    text-align: center;
+    border: 0px solid black;
+    padding: 7px;
+    box-shadow: 1px 1px 161px 10px rgba(0,0,0,1);
+    border-radius: 21px;
+    text-shadow: 1px 2px 2px black;
+
+}
+
+.nextconcert__fecha__calendario3 h3{
+    padding-bottom: 15px;
+}
+
+
+
+
+
+
+
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+
+
+/* DISCOVER */
+
+.descubre{
+    background-color: burlywood;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas:
+    "box0des box0des"
+    "box1des box1des"
+    "box2des box2des"
+    "box3des box3des" 
+    ;
+}
+
+/* CONTENEDORES PAGINA DESCUBRE */
+
+
+.box0{
+    grid-area: box0des;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(../imagenes/discover0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 400px;
+}
+
+
+.box1{
+    grid-area: box1des;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(../imagenes/discover1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    height: 400px;
+
+}
+
+.box2{
+    grid-area: box2des;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(../imagenes/discover2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 400px;
+
+}
+
+.box3{
+    grid-area: box3des;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(../imagenes/discover3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    height: 400px;
+
+}
+
+/* TITULOS PAGINA DESCUBRE */
+
+.box0 h2{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    padding: 30px;
+    font-size: 2rem;
+    text-shadow: 10px 5px 5px black;
+    text-align: left;
+}
+
+.box1 h2{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    padding: 30px;
+    font-size: 2rem;
+    text-shadow: 10px 5px 5px black;
+    text-align: center;
+}
+
+.box2 h2{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    padding: 30px;
+    font-size: 2rem;
+    text-shadow: 10px 5px 5px black;
+    text-align: left;
+}
+
+.box3 h2{
+    justify-self: center;
+    align-self: center;
+    padding: 30px;
+    font-size: 2rem;
+    text-shadow: 10px 5px 5px black;
+    text-align: center;
+}
+
+
+/* VIDEOS PAGINA DESCUBRE */
+
+.descubre_video0{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.descubre_video1{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.descubre_video2{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.descubre_video3{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.box0_parrafo{
+    align-self: center;
+    padding: 50px;
+}
+
+.box1_parrafo{
+    align-self: center;
+    padding: 50px;
+}
+
+.box2_parrafo{
+    align-self: center;
+    padding: 50px;
+}
+
+.box3_parrafo{
+    align-self: center;
+    padding: 50px;
+}
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+
+
+
+/* MEDIA QUERY HASTA 767PX */
+
+@media screen and (max-width: 767px){
+
+    header{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .header__logo{
+        align-self: center;
+    }  
+
+/* --------- PAGINA INDEX ---------*/
+
+
+.hero{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "logo"
+    "contenido"
+    ;
+}
+
+.contenedor__imagenlogo{
+    grid-area: logo;
+    width: 100%;
+    height: 40vh;
+}
+
+.contenedor__cartas{
+    grid-area: contenido;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: auto;
+    position: relative;
+    height: 40vh;
+
+}
+
+.cartas h3{
+    font-size: 2rem;
+}
+
+#carta2 h3{
+    text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------PAGINA NEXT-------- */
+
+.next-concert{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "logoconcert"
+    "calendarioconcert"
+    "experiencias"
+    ;
+    height: 100%;
+    justify-content: center;
+}
+
+.nextconcert__titulo{
+    grid-area: logoconcert;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.nextconcert__titulo h1{
+    font-size: 5rem;
+}
+
+.nextconcert__fechas{
+    grid-area: calendarioconcert;
+    padding-bottom: 100px;
+}
+
+.nextconcert__exp{
+    grid-area: experiencias;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------PAGINA CONTACTO------- */
+
+.contacto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 25% 25% 50%;
+    grid-template-areas: 
+    "logocontacto logocontacto"
+    "beneficioscontacto beneficioscontacto"
+    "imagenescontacto imagenescontacto"
+    ;
+}
+
+.contacto__titulo1{
+    grid-area: logocontacto;
+    text-align: center;
+}
+
+.contacto_form_lista{
+    grid-area: beneficioscontacto;
+    padding: 10px;
+    justify-self: center;
+}
+
+
+.contacto__imagenes{
+    grid-area: imagenescontacto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 70px;
+}
+
+.contacto__imagenes img{
+    width: 120px;
+    height: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* PAGINA DISCOVER */
+
+.descubre{
+    height:100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "lola"
+    "tomorrow"
+    "rock"
+    "cream"
+    ;
+}
+
+.box0{
+    grid-area: lola;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.box1{
+    grid-area: tomorrow;
+    width: 100%;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;}
+
+.box2{
+    grid-area: rock;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.box3{
+    grid-area: cream;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.box0 h2{
+    align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* PAGINA ABOUTUS */
+
+.aboutus{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "aboutlogo aboutlogo"
+    "aboutparrafo aboutparrafo"
+    "aboutbandas aboutbandas"
+    "abouttitulo abouttitulo"
+    ;
+    height: 100%;
+    width: auto;
+}
+.about_contenedor_logo hr{
+    display: none;
+}
+
+.about_contenedor_logo{
+    grid-area: aboutlogo;
+    position: relative;
+    right: 250px;
+}
+
+
+.about_parrafo{
+    grid-area: aboutparrafo;
+    width: 100%;
+    word-wrap: break-word;
+    padding-bottom: 100px;
+}
+
+.about_parrafo_principal{
+    justify-self: center;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+}
+
+
+
+.about_contenedor_bandas{
+    grid-area: aboutbandas;
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    background: rgb(202,200,204);
+    background: -moz-radial-gradient(circle, rgba(202,200,204,1) 0%, rgba(219,174,233,0.28644961402529767) 86%, rgba(141,112,184,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(202,200,204,1) 0%, rgba(219,174,233,0.28644961402529767) 86%, rgba(141,112,184,1) 100%);
+    background: radial-gradient(circle, rgba(202,200,204,1) 0%, rgba(219,174,233,0.28644961402529767) 86%, rgba(141,112,184,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cac8cc",endColorstr="#8d70b8",GradientType=1);
+
+}
+
+.contenedor_about_titulo{
+    grid-area: abouttitulo;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
