@@ -357,7 +357,7 @@ transform: scale(1.1);
 footer{
     display: flex;
     grid-area: footer;
-    height: 3rem;
+    height: 6rem;
     background: rgb(65,7,106);
 background: -moz-linear-gradient(87deg, rgba(65,7,106,1) 0%, rgba(107,30,132,1) 47%, rgba(25,0,62,1) 100%);
 background: -webkit-linear-gradient(87deg, rgba(65,7,106,1) 0%, rgba(107,30,132,1) 47%, rgba(25,0,62,1) 100%);
