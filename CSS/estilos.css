@@ -15,8 +15,26 @@ body{
     height: 100%;
 }
 
+
+.logo{
+    height: 20px;
+}
+
+.navbar-nav a:hover{
+    color: white;
+}
+
+h1:hover{
+    color: gray;
+}
+
+.linknav a:hover{
+    color: grey;
+}
+
 /* ENCABEZADO DONDE ESTAN EL LOGO Y NAV */
 
+/*
 header{
     display: flex;
     justify-content: space-between;
@@ -30,6 +48,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#41076a",endCo
     padding: 5px;
     grid-area: header;
 }
+/*
 
 /*LOGO*/
 .header__logo img{
@@ -402,7 +421,8 @@ footer h3{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    padding: 30px;
 }
 
 /* TITULO 1 PRINCIPAL */
@@ -673,15 +693,8 @@ ul li{
     ), url(../imagenes/nextconcert.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    image-rendering: optimizeQuality;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "titulo fechas"
-    "exp fechas"
-    ;
+    height: 100%;
 }
 
 /*-----*/
@@ -689,14 +702,13 @@ ul li{
 /* CONTENEDOR GENERAL TITULO*/
 
 .nextconcert__titulo{
-    grid-area: titulo;
     align-self: center;
     justify-self: center;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
-/* CONTENEDOR GENERAL H1*/
+/* CONTENEDOR GENERAL h1*/
 
 .nextconcert__titulo h1{
     font-size: 6rem;
@@ -711,48 +723,22 @@ ul li{
     
 }
 
-/* EXPERIENCIAS */
-/*
-.nextconcert__exp{
-    grid-area: exp;
-    display: flex;
-    text-align: center;
-    gap: 10px;
-    padding-bottom: 100px;
-    padding: 10px;
+/*EXPERIENCIAS */
+.exp{
+    padding: 50px;
+    width: 100%;
 }
 
-.nextconcert__exp__cuadros{
-    border: 0px solid black;
-    align-self: center;
-    border-radius: 81px 157px 81px 0px / 66px 30px 43px 0px;
-    background: rgb(202,200,204);
-    background: -moz-radial-gradient(circle, rgba(202,200,204,1) 0%, rgba(219,174,233,0.28644961402529767) 86%, rgba(141,112,184,1) 100%);
-    background: -webkit-radial-gradient(circle, rgba(202,200,204,1) 0%, rgba(219,174,233,0.28644961402529767) 86%, rgba(141,112,184,1) 100%);
-    background: radial-gradient(circle, rgba(202,200,204,1) 0%, rgba(219,174,233,0.28644961402529767) 86%, rgba(141,112,184,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cac8cc",endColorstr="#8d70b8",GradientType=1);
+.exp img{
+    border-radius: 200px;
 }
-
-
-.nextconcert__exp p{
-    font-weight: lighter;
-    font-style: italic;
-    padding: 20px;
-    color: white;
-}
-
-
-/*-----*/
-/*-----*/
 /* CONTENEDOR GENERAL CALENDARIO */
 
 .nextconcert__fechas{
-    grid-area: fechas;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
+    padding: 10px;
+
 }
 
 /* CALENDARIO */
@@ -761,11 +747,11 @@ ul li{
 
 .next__fechas__titulo{
     text-align: center;
-    padding: 40px;
+    padding: 20px;
     display: block;
     font-size: 2rem;
     text-shadow: 1px 2px 2px black;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
 }
 
 
@@ -785,6 +771,7 @@ ul li{
     grid-template-columns: repeat(7, 1fr);
     text-align: right;
     text-shadow: 1px 2px 2px black;
+    padding: 0;
 }
 
 .nextconcert__fechas li{
@@ -802,10 +789,11 @@ ul li{
 /* DIVS CALENDARIO */
 
 
-.nextconcert__fecha__calendario1{
+.nextconcert__calendario{
     text-align: center;
     border: 0px solid black;
-    padding: 7px;
+    padding-left: 0;
+    padding-right: 5px;
     border-radius: 21px;
     text-shadow: 1px 2px 2px black;
     box-shadow: 1px 1px 161px 10px rgba(0,0,0,1);
@@ -813,16 +801,6 @@ ul li{
 
 .nextconcert__fecha__calendario1 h3{
     padding-bottom: 15px;
-}
-
-
-.nextconcert__fecha__calendario2{
-    text-align: center;
-    border: 0px solid black;
-    padding: 7px;
-    border-radius: 21px;
-    text-shadow: 1px 2px 2px black;
-    box-shadow: 1px 1px 161px 10px rgba(0,0,0,1);
 }
 
 .primer_dia_julio{
@@ -833,20 +811,10 @@ ul li{
     padding-bottom: 15px;
 }
 
-.nextconcert__fecha__calendario3{
-    text-align: center;
-    border: 0px solid black;
-    padding: 7px;
-    box-shadow: 1px 1px 161px 10px rgba(0,0,0,1);
-    border-radius: 21px;
-    text-shadow: 1px 2px 2px black;
-
-}
 
 .nextconcert__fecha__calendario3 h3{
     padding-bottom: 15px;
 }
-
 
 
 
