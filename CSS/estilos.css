@@ -688,9 +688,9 @@ ul li{
 .next-concert{
     background: linear-gradient(
         0deg,
-        rgba(0,0,0,0.3),
-        rgba(0,0,0, 0.3)
-    ), url(./imagenes/nextconcert.jpg);
+        rgba(0,0,0,0.5),
+        rgba(0,0,0, 0.5)
+    ), url(/imagenes/nextconcert.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
