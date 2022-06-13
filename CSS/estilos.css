@@ -695,6 +695,7 @@ ul li{
     background-size: cover;
     width: 100%;
     height: 100%;
+ 
 }
 
 /*-----*/
@@ -705,23 +706,14 @@ ul li{
     align-self: center;
     justify-self: center;
     text-align: center;
-    padding-top: 50px;
 }
 
-/* CONTENEDOR GENERAL h1*/
+/* CONTENEDOR GENERAL h2*/
 
-.nextconcert__titulo h1{
+.nextconcert__titulo h2{
     font-size: 6rem;
-    text-align: center;
-    padding: 20px;
 }
 
-.nextconcert_contenedor_logo{
-    grid-area: titulo;
-    max-width: 100%;
-  height: auto;
-    
-}
 
 /*EXPERIENCIAS */
 .exp{
@@ -732,93 +724,26 @@ ul li{
 .exp img{
     border-radius: 200px;
 }
-/* CONTENEDOR GENERAL CALENDARIO */
 
-.nextconcert__fechas{
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-
-}
-
-/* CALENDARIO */
-
-/* TITULO CALENDARIO */
-
-.next__fechas__titulo{
-    text-align: center;
-    padding: 20px;
-    display: block;
-    font-size: 2rem;
-    text-shadow: 1px 2px 2px black;
-    padding-bottom: 30px;
-}
-
-
-/* NOMBRE DIAS */
-
-.nombre__dias{
-    font-weight: bold;
-    text-align: center;
-    text-shadow: 1px 2px 2px black;
-}
-
-/* LISTA NUMEROS CALENDARIO */
-
-.nextconcert__fechas ol{
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    text-align: right;
-    text-shadow: 1px 2px 2px black;
-    padding: 0;
-}
-
-.nextconcert__fechas li{
-    padding: 0px;
-}
-
-/* ORDENAR EL PRIMER DIA JUNIO*/
-
-.primer_dia_junio{
-    grid-column-start: 3;
+.card{
+    padding-bottom: 5px;
 }
 
 
 
 /* DIVS CALENDARIO */
 
-
 .nextconcert__calendario{
     text-align: center;
     border: 0px solid black;
-    padding-left: 0;
-    padding-right: 5px;
     border-radius: 21px;
     text-shadow: 1px 2px 2px black;
-    box-shadow: 1px 1px 161px 10px rgba(0,0,0,1);
-}
-
-.nextconcert__fecha__calendario1 h3{
-    padding-bottom: 15px;
+  
 }
 
 .primer_dia_julio{
     grid-column-start: 5;
 }
-
-.nextconcert__fecha__calendario2 h3{
-    padding-bottom: 15px;
-}
-
-
-.nextconcert__fecha__calendario3 h3{
-    padding-bottom: 15px;
-}
-
-
-
-
 
 
 /* ----------------------------------------------------------- */
