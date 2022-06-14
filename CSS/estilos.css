@@ -359,8 +359,6 @@ transform: scale(1.1);
 
 
 
-
-
 /*------ PAGINA CONTACTO CON BOOTSTRAP--------*/
 
 .contacto{
@@ -380,7 +378,6 @@ transform: scale(1.1);
 .contacto__titulo1 h2{
     font-size: 4.5rem;
     text-shadow: 4px 1px 1px black;
-    
 }
 
 .animate__jackInTheBox{
@@ -599,8 +596,6 @@ transform: scale(1.1);
     height: 100%;
  
 }
-
-/*-----*/
 
 /* CONTENEDOR GENERAL h2*/
 
