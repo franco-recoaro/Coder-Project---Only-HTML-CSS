@@ -33,23 +33,6 @@ h1:hover{
 }
 
 /* ENCABEZADO DONDE ESTAN EL LOGO Y NAV */
-
-/*
-header{
-    display: flex;
-    justify-content: space-between;
-    background: rgb(65,7,106);
-background: -moz-linear-gradient(87deg, rgba(65,7,106,1) 0%, rgba(107,30,132,1) 47%, rgba(25,0,62,1) 100%);
-background: -webkit-linear-gradient(87deg, rgba(65,7,106,1) 0%, rgba(107,30,132,1) 47%, rgba(25,0,62,1) 100%);
-background: linear-gradient(87deg, rgba(65,7,106,1) 0%, rgba(107,30,132,1) 47%, rgba(25,0,62,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#41076a",endColorstr="#19003e",GradientType=1);
-    align-items: center;
-    width: 100%;
-    padding: 5px;
-    grid-area: header;
-}
-/*
-
 /*LOGO*/
 .header__logo img{
     position: relative;
@@ -100,7 +83,25 @@ li a:hover{
 
 
 
+/* FOOTER PARA TODOS LOS ENLACES */
+footer{
+    display: flex;
+    grid-area: footer;
+    height: 6rem;
+    background: rgb(65,7,106);
+background: -moz-linear-gradient(87deg, rgba(65,7,106,1) 0%, rgba(107,30,132,1) 47%, rgba(25,0,62,1) 100%);
+background: -webkit-linear-gradient(87deg, rgba(65,7,106,1) 0%, rgba(107,30,132,1) 47%, rgba(25,0,62,1) 100%);
+background: linear-gradient(87deg, rgba(65,7,106,1) 0%, rgba(107,30,132,1) 47%, rgba(25,0,62,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#41076a",endColorstr="#19003e",GradientType=1);
+    justify-content: center;
+    font-size: 1rem;
+}
 
+footer h3{
+    padding: 10px;
+    color: white;
+}
+  
 
 
 
@@ -108,7 +109,7 @@ li a:hover{
 /* ----------------------------------------------------------- */
 
 
-/* PAGINA INDEX */
+/* PAGINA INDEX CON GRID */
 
 .hero{
     display: grid;
@@ -172,28 +173,7 @@ li a:hover{
 }
 
 
-
-
-
-/* BOTON SIN USAR
-
-button{
-    display: inline-block;
-    padding: 0.4rem;
-    border-radius: 10%;
-    width: 15%;
-    margin: 10px;
-    font-weight: bold;
-    box-shadow: 0 0 50px rgba(0,0,0,0.8);
-}
-*/
-
-
-
-
 /* CARTAS RECITALES MODIFICACION GENERAL */
-
-
 /* CONTENEDOR CARTAS */
 .contenedor__cartas{
 grid-area: carta;
@@ -372,25 +352,6 @@ transform: scale(1.1);
     color: white;
 }
 
-/* FOOTER PARA TODOS LOS ENLACES */
-footer{
-    display: flex;
-    grid-area: footer;
-    height: 6rem;
-    background: rgb(65,7,106);
-background: -moz-linear-gradient(87deg, rgba(65,7,106,1) 0%, rgba(107,30,132,1) 47%, rgba(25,0,62,1) 100%);
-background: -webkit-linear-gradient(87deg, rgba(65,7,106,1) 0%, rgba(107,30,132,1) 47%, rgba(25,0,62,1) 100%);
-background: linear-gradient(87deg, rgba(65,7,106,1) 0%, rgba(107,30,132,1) 47%, rgba(25,0,62,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#41076a",endColorstr="#19003e",GradientType=1);
-    justify-content: center;
-    font-size: 1rem;
-}
-
-footer h3{
-    padding: 10px;
-    color: white;
-}
-  
 
 
 /* ----------------------------------------------------------- */
@@ -400,7 +361,7 @@ footer h3{
 
 
 
-/* PAGINA CONTACTO*/
+/*------ PAGINA CONTACTO CON BOOTSTRAP--------*/
 
 .contacto{
     background-image: linear-gradient(
@@ -415,12 +376,6 @@ footer h3{
 }
 
 /* TITULO 1 PRINCIPAL */
-
-.contacto__titulo1{
-    display: flex;
-    justify-self: center;
-    align-self: center;
-}
 
 .contacto__titulo1 h2{
     font-size: 4.5rem;
@@ -451,7 +406,7 @@ footer h3{
 
 
 
-/* ABOUT US */
+/* ---------ABOUT US CON GRID----------*/
 
 .aboutus{
     width: 100%;
@@ -628,8 +583,7 @@ footer h3{
 
 
 
-
-/*NEXT CONCERT */
+/*---NEXT CONCERT CON BOOTSTRAP---*/
 
 /* MAIN NEXT CONCERT */
 
@@ -647,14 +601,6 @@ footer h3{
 }
 
 /*-----*/
-/* TITULO */
-/* CONTENEDOR GENERAL TITULO*/
-
-.nextconcert__titulo{
-    align-self: center;
-    justify-self: center;
-    text-align: center;
-}
 
 /* CONTENEDOR GENERAL h2*/
 
@@ -673,9 +619,6 @@ footer h3{
     border-radius: 200px;
 }
 
-.card{
-    padding-bottom: 5px;
-}
 
 
 
@@ -684,7 +627,7 @@ footer h3{
 /* ----------------------------------------------------------- */
 
 
-/* DISCOVER */
+/* --------- DISCOVER CON GRID Y MEDIAS QUERY ----- */
 
 .descubre{
     background-color: burlywood;
@@ -890,22 +833,18 @@ footer h3{
         align-self: center;
     }  
 
-/* --------- PAGINA INDEX ---------*/
+/* --------- PAGINA INDEX CON GRID - MEDIA QUERY ---------*/
 
 
 .hero{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    "logo"
-    "contenido"
-    ;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
 .contenedor__imagenlogo{
-    grid-area: logo;
     width: 100%;
-    height: 40vh;
 }
 
 .contenedor__cartas{
@@ -914,8 +853,6 @@ footer h3{
     flex-direction: column;
     gap: 30px;
     height: auto;
-    position: relative;
-    height: 40vh;
 
 }
 
@@ -928,23 +865,19 @@ footer h3{
 
 }
 
+.cartas{
+    height: 100px;
+}
 
-/* ---------PAGINA NEXT-------- */
+
+/* ---------PAGINA NEXT CON BOOTSTRAP-MEDIA QUERY -------- */
 
 .next-concert{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    "logoconcert"
-    "calendarioconcert"
-    "experiencias"
-    ;
     height: 100%;
     justify-content: center;
 }
 
 .nextconcert__titulo{
-    grid-area: logoconcert;
     display: flex;
     flex-direction: column;
 
@@ -956,7 +889,6 @@ footer h3{
 
 
 .nextconcert__exp{
-    grid-area: experiencias;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -965,7 +897,7 @@ footer h3{
 
 
 
-/* -------PAGINA CONTACTO------- */
+/* -------PAGINA DISCOVER CON GRID - MEDIA QUERY------- */
 
 /* PAGINA DISCOVER */
 
@@ -1027,7 +959,7 @@ footer h3{
 
 
 
-/* PAGINA ABOUTUS */
+/* PAGINA ABOUTUS CON GRID - MEDIA QUERY*/
 
 .aboutus{
     display: grid;
@@ -1038,7 +970,7 @@ footer h3{
     "aboutbandas aboutbandas"
     "abouttitulo abouttitulo"
     ;
-    height: 4000px;
+    height: 3000px;
     width: 100%;
     justify-content: center;
 }
