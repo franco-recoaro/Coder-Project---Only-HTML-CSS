@@ -399,10 +399,6 @@ transform: scale(1.1);
 /* ----------------------------------------------------------- */
 
 
-
-
-
-
 /* ---------ABOUT US CON GRID----------*/
 
 .aboutus{
@@ -958,14 +954,14 @@ transform: scale(1.1);
 
 .aboutus{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas: 
-    "aboutlogo aboutlogo"
-    "aboutparrafo aboutparrafo"
-    "aboutbandas aboutbandas"
-    "abouttitulo abouttitulo"
+    "aboutlogo"
+    "aboutparrafo"
+    "aboutbandas"
+    "abouttitulo"
     ;
-    height: 3000px;
+    height: 100%;
     width: 100%;
     justify-content: center;
 }
@@ -982,18 +978,18 @@ transform: scale(1.1);
 
 .about_parrafo{
     grid-area: aboutparrafo;
-    width: 100%;
     word-wrap: break-word;
-    padding-bottom: 100px;
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
+    padding-bottom: 10px;
+    margin: 0;
 }
 
 .about_parrafo_principal{
     justify-self: center;
     align-items: center;
     align-self: center;
-    width: 100%;
 }
 
 
@@ -1001,10 +997,9 @@ transform: scale(1.1);
 .about_contenedor_bandas{
     grid-area: aboutbandas;
     display: flex;
-    padding: 30px;
     flex-direction: column;
     gap: 30px;
-    height: 900px;
+    height: 800px;
     justify-content: center;
     align-items: center;
     background: rgb(202,200,204);
@@ -1019,6 +1014,6 @@ transform: scale(1.1);
     grid-area: abouttitulo;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 30px;
 }
 }
