@@ -1,14 +1,85 @@
-.about{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    "aboutlogo"
-    "aboutparrafo"
-    "aboutbandas"
-    "abouttitulo"
-    ;
-    height: 100%;
+@import "./partials/reset.scss";
+@import "./partials/navbarcompleto";
+@import "./partials/variables";
+@import "./partials/logo";
+@import "./partials/parrafo";
+@import "./partials/footer";
+
+.bandas{
+    grid-area: imagen2;
     width: 100%;
-    justify-content: center;
-    
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas: 
+    "collab collab"
+    "banda1 banda2"
+    "banda3 banda4"
+    "banda5 banda6";
+    padding: 10px;
+    .bandas__titulo{
+        grid-area: collab;
+        display: flex;
+        flex-direction: column;
+        padding: 1px;
+        font-size: 2rem;
+        text-shadow: 10px 5px 5px black;
+        align-self: center;
+        justify-self: center; }
+    .imagencolab1{
+        grid-area: banda1;
+        justify-self: center;}
+    .imagencolab2{
+        grid-area: banda2;
+        justify-self: center;}
+    .imagencolab3{
+        grid-area: banda3;
+        justify-self: center;}
+    .imagencolab4{
+        grid-area: banda4;
+        justify-self: center;}
+    .imagencolab5{
+        grid-area: banda5;
+        justify-self: center; 
+    }
+    .imagencolab6{
+        grid-area: banda6;
+        justify-self: center;} 
 }
+
+.about{
+    width: 100%;
+    background:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(../imagenes/imagencontact.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% 1fr 1fr 1fr;
+    grid-template-areas: 
+    "imagen1 imagen1"
+    "parrafo parrafo"
+    "imagen2 imagen2"
+    "titulo titulo";
+    padding: 30px;
+}
+
+/* TITULO FINAL */
+.titulofinal{
+    grid-area: titulo;
+    justify-items: center;
+    align-self: center;
+}
+.titulofinal h3{
+    text-align: center;
+    font-size: 4.5rem;
+    text-shadow: 5px 5px 5px black;
+}
+
+.animate__bounce{
+    animation-duration: 8s;
+}
+

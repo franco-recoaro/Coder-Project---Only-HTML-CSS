@@ -1,0 +1,64 @@
+.logo{
+    height: 20px;
+}
+
+.navbar-nav a:hover{
+    color: white;
+}
+
+h1:hover{
+    color: gray;
+}
+
+.linknav a:hover{
+    color: grey;
+}
+
+/* ENCABEZADO DONDE ESTAN EL LOGO Y NAV */
+/*LOGO*/
+.header__logo img{
+    position: relative;
+    top: 5px;
+    right: 4px;
+    transform: rotate(160deg);
+    image-rendering:optimizeQuality;
+    margin-left: 10px;
+
+
+}
+
+.header__logo{
+    display: flex;
+}
+
+.header__logo h1{
+    color: white;
+    font-size: 1.8rem;
+    position: relative;
+    right: 6px;
+}
+
+.header__logo a{
+    text-decoration: none;
+}
+
+/* BARRA NAVEGADOR */
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+ul li{
+    margin: 10px;
+    font-size: 1rem;
+}
+
+li a{
+    text-decoration: none;
+    color:white;
+}
+
+li a:hover{
+    color: gray;
+}
