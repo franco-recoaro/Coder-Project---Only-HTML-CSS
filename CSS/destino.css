@@ -11,15 +11,9 @@
 .navbar-nav a:hover {
   color: white; }
 
-h1:hover {
-  color: gray; }
-
-.linknav a:hover {
-  color: grey; }
-
 /* ENCABEZADO DONDE ESTAN EL LOGO Y NAV */
 /*LOGO*/
-.header__logo img {
+.logo img {
   position: relative;
   top: 5px;
   right: 4px;
@@ -27,19 +21,14 @@ h1:hover {
   image-rendering: optimizeQuality;
   margin-left: 10px; }
 
-.header__logo {
-  display: flex; }
-
-.header__logo h1 {
-  color: white;
-  font-size: 1.8rem;
-  position: relative;
-  right: 6px;
+a {
   text-decoration: none; }
-
-.header__logo a {
-  text-decoration: none;
-  color: white; }
+  a h1 {
+    color: gray;
+    font-size: 1.8rem;
+    position: relative; }
+  a h1:hover {
+    color: white; }
 
 /* BARRA NAVEGADOR */
 nav ul {
@@ -116,10 +105,7 @@ footer {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 25% 25% 25% 25%;
-  grid-template-areas: "collab collab"
- "banda1 banda2"
- "banda3 banda4"
- "banda5 banda6";
+  grid-template-areas: "collab collab" "banda1 banda2" "banda3 banda4" "banda5 banda6";
   padding: 10px; }
   .bandas .bandas__titulo {
     grid-area: collab;
@@ -157,10 +143,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 10% 1fr 1fr 1fr;
-  grid-template-areas: "imagen1 imagen1"
- "parrafo parrafo"
- "imagen2 imagen2"
- "titulo titulo";
+  grid-template-areas: "imagen1 imagen1" "parrafo parrafo" "imagen2 imagen2" "titulo titulo";
   padding: 30px; }
 
 /* TITULO FINAL */
@@ -168,10 +151,10 @@ footer {
   grid-area: titulo;
   justify-items: center;
   align-self: center;
-  text-align: center;
-  font-size: 4.5rem;
- }
-.titulofinal .titulofinal h3{
-    text-shadow: 5px 5px 5px black;}
-    .animate__bounce {
+  text-align: center; }
+  .titulofinal h3 {
+    text-shadow: 5px 5px 5px black;
+    font-size: 4.5rem; }
+
+.animate__bounce {
   animation-duration: 8s; }

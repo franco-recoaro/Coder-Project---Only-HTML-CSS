@@ -6,43 +6,28 @@
     color: white;
 }
 
-h1:hover{
-    color: gray;
-}
-
-.linknav a:hover{
-    color: grey;
-}
-
 /* ENCABEZADO DONDE ESTAN EL LOGO Y NAV */
 /*LOGO*/
-.header__logo img{
+.logo img{
     position: relative;
     top: 5px;
     right: 4px;
     transform: rotate(160deg);
     image-rendering:optimizeQuality;
     margin-left: 10px;
-
-
 }
 
-.header__logo{
-    display: flex;
-}
-
-.header__logo h1{
-    color: white;
+a{
+    text-decoration: none;
+h1{
+    color: gray;
     font-size: 1.8rem;
-    position: relative;
-    right: 6px;
-    text-decoration: none;
-}
-
-.header__logo a{
-    text-decoration: none;
+    position: relative;}
+h1:hover{
     color: white;
 }
+}
+
 
 /* BARRA NAVEGADOR */
 
