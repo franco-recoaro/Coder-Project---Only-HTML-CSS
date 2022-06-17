@@ -37,7 +37,8 @@ h1:hover {
   right: 6px; }
 
 .header__logo a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: white; }
 
 /* BARRA NAVEGADOR */
 nav ul {
