@@ -24,11 +24,13 @@
 a {
   text-decoration: none; }
   a h1 {
-    color: gray;
+    color: white;
     font-size: 1.8rem;
     position: relative; }
   a h1:hover {
-    color: white; }
+    color: gray; }
+  a img {
+    color: gray; }
 
 /* BARRA NAVEGADOR */
 nav ul {
