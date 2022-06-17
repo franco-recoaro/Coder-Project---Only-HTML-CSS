@@ -1,0 +1,7 @@
+.about {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "aboutlogo" "aboutparrafo" "aboutbandas" "abouttitulo";
+  height: 100%;
+  width: 100%;
+  justify-content: center; }
