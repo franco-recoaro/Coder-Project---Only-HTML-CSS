@@ -34,7 +34,8 @@ h1:hover {
   color: white;
   font-size: 1.8rem;
   position: relative;
-  right: 6px; }
+  right: 6px;
+  text-decoration: none; }
 
 .header__logo a {
   text-decoration: none;
@@ -115,7 +116,10 @@ footer {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 25% 25% 25% 25%;
-  grid-template-areas: "collab collab" "banda1 banda2" "banda3 banda4" "banda5 banda6";
+  grid-template-areas: "collab collab"
+ "banda1 banda2"
+ "banda3 banda4"
+ "banda5 banda6";
   padding: 10px; }
   .bandas .bandas__titulo {
     grid-area: collab;
@@ -153,7 +157,10 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 10% 1fr 1fr 1fr;
-  grid-template-areas: "imagen1 imagen1" "parrafo parrafo" "imagen2 imagen2" "titulo titulo";
+  grid-template-areas: "imagen1 imagen1"
+ "parrafo parrafo"
+ "imagen2 imagen2"
+ "titulo titulo";
   padding: 30px; }
 
 /* TITULO FINAL */
