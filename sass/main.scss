@@ -5,15 +5,17 @@
 @import "./partials/footer";
 @import "./partials/variables";
 
+/*Mixins*/
+@mixin Centroalturayancho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%}
+
 /* ABOUT */
 @import "./partials/aboutus/logoabout";
 @import "./partials/aboutus/parrafo";
-
-/* NEXT-CONCERT */
-
-/* CONTACTO */
-
-/* DISCOVER */
 
 /* ABOUT US */
 .about{
@@ -40,40 +42,25 @@
     .bandas{
         grid-area: imagen2;
         width: 100%;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 25% 25% 25% 25%;
-        grid-template-areas: 
-        "collab collab"
-        "banda1 banda2"
-        "banda3 banda4"
-        "banda5 banda6";
+        display: flex;
+        flex-direction: column;
         padding: 10px;
         &__titulo{
-            grid-area: collab;
+            @include Centroalturayancho;
             display: flex;
             flex-direction: column;
             padding: 1px;
-            font-size: 2rem;
             text-shadow: 10px 5px 5px black;
-            align-self: center;
-            justify-self: center;}
-            img{
-                justify-self: center;
+            h3{
+                font-size: 3rem;
             }
-        .imagencolab1{
-            grid-area: banda1;}
-        .imagencolab2{
-            grid-area: banda2;}
-        .imagencolab3{
-            grid-area: banda3;}
-        .imagencolab4{
-            grid-area: banda4;}
-        .imagencolab5{
-            grid-area: banda5;}
-        .imagencolab6{
-            grid-area: banda6;} 
+            }
+            &__imagenes{
+                @include Centroalturayancho;
+                gap: 30px;    
+            }
     }
+
     /* TITULO FINAL */
     .titulofinal{
         grid-area: titulo;
@@ -110,6 +97,7 @@
     background-size: cover;
     padding: 5rem;
 }
+
 /* TITULO PRINCIPAL*/ 
 .contenedor{
     grid-area: titulo;
@@ -125,9 +113,13 @@
     &__minititulo{
         text-shadow: 1px 1px 10px black;
         display: flex;
-        align-items: center;}
+        align-items: center;
+        h2{
+            font-size: 1rem;
+        }
+    }
 }
-/* CONTENEDOR CARTAS */
+
 .contenedor__cartas{
     grid-area: carta;
     display: grid;
@@ -145,21 +137,85 @@
     }
 
     .cartas{
-        display: flex;
+        @include Centroalturayancho;
         box-shadow: 0 2px 2px black;
         border: 0px solid black;
         border-radius: 10px;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-    }
-
+        &:hover{
+                transform: scale(1.1);}
+        h3{
+            text-shadow: 1px 1px 1px black;}
+        }
+    
+    
+    /*EACH PARA LAS CARTAS */
     @each $carta in carta1, carta2, carta3, carta4{
         .#{$carta}{
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/#{$carta}.png);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/#{$carta}.jpg);
        background-size: cover;
        font-size: 2rem;
        grid-area: #{$carta};
         }
         }
+
+        .publicidad{
+            @include Centroalturayancho;
+            flex-direction: column;
+            grid-area: publicidad;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0,0,0,0.2),
+                rgba(0,0,0,0.2)
+            ),url(../imagenes/Aside.jpg);
+            border-radius: 10px;
+            box-shadow: 0 2px 2px black;
+            &:hover{
+                transform: scale(1.1);
+            }
+            h3{
+                text-shadow: 1px 1px 1px black;
+            }
+            &__titulo{
+                color: white;  
+                font-size: 3rem;
+                text-shadow: 0px 0px 5px grey;
+                a{
+                    text-decoration: none;
+                     color: white;}
+                     }
+                    }
+
+/* NEXT-CONCERT */
+.nextconcert{
+    background: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0, 0.5)
+    ), url(../imagenes/nextconcert.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    &__titulo h2{
+        font-size: 6rem;}
+}
+.card{
+    opacity: 1;
+    img{
+        background-size: cover;
+    }
+}
+
+.card:hover{
+    opacity:0.5;
+}
+
+
+/*EXPERIENCIAS */
+.exp{
+    padding: 50px;
+    width: 100%;
+    img{
+        border-radius: 200px;
+    }
+}

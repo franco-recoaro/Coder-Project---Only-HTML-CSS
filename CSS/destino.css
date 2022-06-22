@@ -64,6 +64,7 @@ footer {
     padding: 10px;
     color: white; }
 
+/*Mixins*/
 /* ABOUT */
 .logoabout {
   display: flex;
@@ -103,9 +104,6 @@ footer {
     width: 100%;
     height: 100%; }
 
-/* NEXT-CONCERT */
-/* CONTACTO */
-/* DISCOVER */
 /* ABOUT US */
 .about {
   grid-area: main;
@@ -123,34 +121,28 @@ footer {
 .bandas {
   grid-area: imagen2;
   width: 100%;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 25% 25% 25% 25%;
-  grid-template-areas: "collab collab" "banda1 banda2" "banda3 banda4" "banda5 banda6";
+  display: flex;
+  flex-direction: column;
   padding: 10px; }
   .bandas__titulo {
-    grid-area: collab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     padding: 1px;
-    font-size: 2rem;
-    text-shadow: 10px 5px 5px black;
-    align-self: center;
-    justify-self: center; }
-  .bandas img {
-    justify-self: center; }
-  .bandas .imagencolab1 {
-    grid-area: banda1; }
-  .bandas .imagencolab2 {
-    grid-area: banda2; }
-  .bandas .imagencolab3 {
-    grid-area: banda3; }
-  .bandas .imagencolab4 {
-    grid-area: banda4; }
-  .bandas .imagencolab5 {
-    grid-area: banda5; }
-  .bandas .imagencolab6 {
-    grid-area: banda6; }
+    text-shadow: 10px 5px 5px black; }
+    .bandas__titulo h3 {
+      font-size: 3rem; }
+  .bandas__imagenes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 30px; }
 
 /* TITULO FINAL */
 .titulofinal {
@@ -196,8 +188,9 @@ footer {
     text-shadow: 1px 1px 10px black;
     display: flex;
     align-items: center; }
+    .contenedor__minititulo h2 {
+      font-size: 1rem; }
 
-/* CONTENEDOR CARTAS */
 .contenedor__cartas {
   grid-area: carta;
   display: grid;
@@ -213,34 +206,87 @@ footer {
 
 .cartas {
   display: flex;
-  box-shadow: 0 2px 2px black;
-  border: 0px solid black;
-  border-radius: 10px;
   justify-content: center;
   align-items: center;
+  width: 100%;
   height: 100%;
-  width: 100%; }
+  box-shadow: 0 2px 2px black;
+  border: 0px solid black;
+  border-radius: 10px; }
+  .cartas:hover {
+    transform: scale(1.1); }
+  .cartas h3 {
+    text-shadow: 1px 1px 1px black; }
 
+/*EACH PARA LAS CARTAS */
 .carta1 {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/carta1.png);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/carta1.jpg);
   background-size: cover;
   font-size: 2rem;
   grid-area: carta1; }
 
 .carta2 {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/carta2.png);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/carta2.jpg);
   background-size: cover;
   font-size: 2rem;
   grid-area: carta2; }
 
 .carta3 {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/carta3.png);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/carta3.jpg);
   background-size: cover;
   font-size: 2rem;
   grid-area: carta3; }
 
 .carta4 {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/carta4.png);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/carta4.jpg);
   background-size: cover;
   font-size: 2rem;
   grid-area: carta4; }
+
+.publicidad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  grid-area: publicidad;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../imagenes/Aside.jpg);
+  border-radius: 10px;
+  box-shadow: 0 2px 2px black; }
+  .publicidad:hover {
+    transform: scale(1.1); }
+  .publicidad h3 {
+    text-shadow: 1px 1px 1px black; }
+  .publicidad__titulo {
+    color: white;
+    font-size: 3rem;
+    text-shadow: 0px 0px 5px grey; }
+    .publicidad__titulo a {
+      text-decoration: none;
+      color: white; }
+
+/* NEXT-CONCERT */
+.nextconcert {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/nextconcert.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%; }
+  .nextconcert__titulo h2 {
+    font-size: 6rem; }
+
+.card {
+  opacity: 1; }
+  .card img {
+    background-size: cover; }
+
+.card:hover {
+  opacity: 0.5; }
+
+/*EXPERIENCIAS */
+.exp {
+  padding: 50px;
+  width: 100%; }
+  .exp img {
+    border-radius: 200px; }
