@@ -220,12 +220,6 @@ a{
     grid-area: carta1;
 }
 
-#carta1 a{
-    text-decoration: none;
-    color: white;
- 
-}
-
 #carta1:hover{
     transform: scale(1.1);
 }

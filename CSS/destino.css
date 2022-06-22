@@ -103,7 +103,6 @@ footer {
     width: 100%;
     height: 100%; }
 
-/* INDEX */
 /* NEXT-CONCERT */
 /* CONTACTO */
 /* DISCOVER */
@@ -118,47 +117,130 @@ footer {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 10% 1fr 1fr 1fr;
   grid-template-areas: "imagen1 imagen1" "parrafo parrafo" "imagen2 imagen2" "titulo titulo";
-  padding: 30px;
-  /* BANDAS COLABORACIONES */
-  /* TITULO FINAL */ }
-  .about .bandas {
-    grid-area: imagen2;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 25% 25% 25% 25%;
-    grid-template-areas: "collab collab" "banda1 banda2" "banda3 banda4" "banda5 banda6";
-    padding: 10px; }
-    .about .bandas .bandas__titulo {
-      grid-area: collab;
-      display: flex;
-      flex-direction: column;
-      padding: 1px;
-      font-size: 2rem;
-      text-shadow: 10px 5px 5px black;
-      align-self: center;
-      justify-self: center; }
-    .about .bandas img {
-      justify-self: center; }
-    .about .bandas .imagencolab1 {
-      grid-area: banda1; }
-    .about .bandas .imagencolab2 {
-      grid-area: banda2; }
-    .about .bandas .imagencolab3 {
-      grid-area: banda3; }
-    .about .bandas .imagencolab4 {
-      grid-area: banda4; }
-    .about .bandas .imagencolab5 {
-      grid-area: banda5; }
-    .about .bandas .imagencolab6 {
-      grid-area: banda6; }
-  .about .titulofinal {
-    grid-area: titulo;
-    justify-items: center;
+  padding: 30px; }
+
+/* BANDAS COLABORACIONES */
+.bandas {
+  grid-area: imagen2;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-areas: "collab collab" "banda1 banda2" "banda3 banda4" "banda5 banda6";
+  padding: 10px; }
+  .bandas__titulo {
+    grid-area: collab;
+    display: flex;
+    flex-direction: column;
+    padding: 1px;
+    font-size: 2rem;
+    text-shadow: 10px 5px 5px black;
     align-self: center;
-    text-align: center; }
-    .about .titulofinal h3 {
-      text-shadow: 5px 5px 5px black;
-      font-size: 4.5rem; }
-  .about .animate__bounce {
-    animation-duration: 8s; }
+    justify-self: center; }
+  .bandas img {
+    justify-self: center; }
+  .bandas .imagencolab1 {
+    grid-area: banda1; }
+  .bandas .imagencolab2 {
+    grid-area: banda2; }
+  .bandas .imagencolab3 {
+    grid-area: banda3; }
+  .bandas .imagencolab4 {
+    grid-area: banda4; }
+  .bandas .imagencolab5 {
+    grid-area: banda5; }
+  .bandas .imagencolab6 {
+    grid-area: banda6; }
+
+/* TITULO FINAL */
+.titulofinal {
+  grid-area: titulo;
+  justify-items: center;
+  align-self: center;
+  text-align: center; }
+  .titulofinal h3 {
+    text-shadow: 5px 5px 5px black;
+    font-size: 4.5rem; }
+
+.animate__bounce {
+  animation-duration: 8s; }
+
+/* INDEX CON GRID*/
+.hero {
+  display: grid;
+  grid-area: main;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "titulo titulo titulo" "carta carta carta" "carta carta carta";
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  gap: 10px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/imagenhero.jpg);
+  background-size: cover;
+  padding: 5rem; }
+
+/* TITULO PRINCIPAL*/
+.contenedor {
+  grid-area: titulo;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  height: auto; }
+  .contenedor__titulologo {
+    display: flex;
+    align-items: center;
+    gap: 5px; }
+  .contenedor__minititulo {
+    text-shadow: 1px 1px 10px black;
+    display: flex;
+    align-items: center; }
+
+/* CONTENEDOR CARTAS */
+.contenedor__cartas {
+  grid-area: carta;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "carta1 carta2 publicidad" "carta3 carta4 publicidad";
+  height: 50vh;
+  width: 100%;
+  gap: 5px; }
+  .contenedor__cartas a {
+    text-decoration: none;
+    color: white; }
+
+.cartas {
+  display: flex;
+  box-shadow: 0 2px 2px black;
+  border: 0px solid black;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%; }
+
+.carta1 {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/carta1.png);
+  background-size: cover;
+  font-size: 2rem;
+  grid-area: carta1; }
+
+.carta2 {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/carta2.png);
+  background-size: cover;
+  font-size: 2rem;
+  grid-area: carta2; }
+
+.carta3 {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/carta3.png);
+  background-size: cover;
+  font-size: 2rem;
+  grid-area: carta3; }
+
+.carta4 {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/carta4.png);
+  background-size: cover;
+  font-size: 2rem;
+  grid-area: carta4; }
