@@ -1,3 +1,6 @@
+
+/* LOGO TICKET */
+
 .logo{
     height: 20px;
 }
@@ -7,17 +10,16 @@
 }
 
 /* ENCABEZADO DONDE ESTAN EL LOGO Y NAV */
-/*LOGO*/
-.logo img{
+/*LOGO MIKITECK*/
+.logo{
     position: relative;
-    top: 5px;
-    right: 4px;
     transform: rotate(160deg);
     image-rendering:optimizeQuality;
-    margin-left: 10px;
-}
+    height: 20px;
+    }
 
-a{
+
+.linknav{
     text-decoration: none;
 h1{
     color: white;
@@ -26,27 +28,24 @@ h1{
 h1:hover{
     color: gray;
 }
-img{
-    color: gray;
-}
 }
 /* BARRA NAVEGADOR */
 
 nav ul{
     display: flex;
     list-style: none;
-}
-
-ul li{
-    margin: 10px;
-    font-size: 1rem;
-}
-
-li a{
-    text-decoration: none;
-    color:white;
-}
-
-li a:hover{
-    color: gray;
+    
+    li{
+        margin: 10px;
+        font-size: 1rem;
+    }
+    
+    li a{
+        text-decoration: none;
+        color:white;
+    }
+    
+    li a:hover{
+        color: gray;
+    }
 }

@@ -5,6 +5,7 @@
   font-family: 'Bebas Neue', cursive;
   font: white; }
 
+/* LOGO TICKET */
 .logo {
   height: 20px; }
 
@@ -12,41 +13,34 @@
   color: white; }
 
 /* ENCABEZADO DONDE ESTAN EL LOGO Y NAV */
-/*LOGO*/
-.logo img {
+/*LOGO MIKITECK*/
+.logo {
   position: relative;
-  top: 5px;
-  right: 4px;
   transform: rotate(160deg);
   image-rendering: optimizeQuality;
-  margin-left: 10px; }
+  height: 20px; }
 
-a {
+.linknav {
   text-decoration: none; }
-  a h1 {
+  .linknav h1 {
     color: white;
     font-size: 1.8rem;
     position: relative; }
-  a h1:hover {
-    color: gray; }
-  a img {
+  .linknav h1:hover {
     color: gray; }
 
 /* BARRA NAVEGADOR */
 nav ul {
   display: flex;
   list-style: none; }
-
-ul li {
-  margin: 10px;
-  font-size: 1rem; }
-
-li a {
-  text-decoration: none;
-  color: white; }
-
-li a:hover {
-  color: gray; }
+  nav ul li {
+    margin: 10px;
+    font-size: 1rem; }
+  nav ul li a {
+    text-decoration: none;
+    color: white; }
+  nav ul li a:hover {
+    color: gray; }
 
 .logoabout {
   display: flex;
@@ -101,42 +95,6 @@ footer {
     padding: 10px;
     color: white; }
 
-.bandas {
-  grid-area: imagen2;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 25% 25% 25% 25%;
-  grid-template-areas: "collab collab" "banda1 banda2" "banda3 banda4" "banda5 banda6";
-  padding: 10px; }
-  .bandas .bandas__titulo {
-    grid-area: collab;
-    display: flex;
-    flex-direction: column;
-    padding: 1px;
-    font-size: 2rem;
-    text-shadow: 10px 5px 5px black;
-    align-self: center;
-    justify-self: center; }
-  .bandas .imagencolab1 {
-    grid-area: banda1;
-    justify-self: center; }
-  .bandas .imagencolab2 {
-    grid-area: banda2;
-    justify-self: center; }
-  .bandas .imagencolab3 {
-    grid-area: banda3;
-    justify-self: center; }
-  .bandas .imagencolab4 {
-    grid-area: banda4;
-    justify-self: center; }
-  .bandas .imagencolab5 {
-    grid-area: banda5;
-    justify-self: center; }
-  .bandas .imagencolab6 {
-    grid-area: banda6;
-    justify-self: center; }
-
 .about {
   width: 100%;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/imagencontact.jpg);
@@ -146,17 +104,51 @@ footer {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 10% 1fr 1fr 1fr;
   grid-template-areas: "imagen1 imagen1" "parrafo parrafo" "imagen2 imagen2" "titulo titulo";
-  padding: 30px; }
-
-/* TITULO FINAL */
-.titulofinal {
-  grid-area: titulo;
-  justify-items: center;
-  align-self: center;
-  text-align: center; }
-  .titulofinal h3 {
-    text-shadow: 5px 5px 5px black;
-    font-size: 4.5rem; }
-
-.animate__bounce {
-  animation-duration: 8s; }
+  padding: 30px;
+  /* BANDAS COLABORACIONES */
+  /* TITULO FINAL */ }
+  .about .bandas {
+    grid-area: imagen2;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas: "collab collab" "banda1 banda2" "banda3 banda4" "banda5 banda6";
+    padding: 10px; }
+    .about .bandas .bandas__titulo {
+      grid-area: collab;
+      display: flex;
+      flex-direction: column;
+      padding: 1px;
+      font-size: 2rem;
+      text-shadow: 10px 5px 5px black;
+      align-self: center;
+      justify-self: center; }
+    .about .bandas .imagencolab1 {
+      grid-area: banda1;
+      justify-self: center; }
+    .about .bandas .imagencolab2 {
+      grid-area: banda2;
+      justify-self: center; }
+    .about .bandas .imagencolab3 {
+      grid-area: banda3;
+      justify-self: center; }
+    .about .bandas .imagencolab4 {
+      grid-area: banda4;
+      justify-self: center; }
+    .about .bandas .imagencolab5 {
+      grid-area: banda5;
+      justify-self: center; }
+    .about .bandas .imagencolab6 {
+      grid-area: banda6;
+      justify-self: center; }
+  .about .titulofinal {
+    grid-area: titulo;
+    justify-items: center;
+    align-self: center;
+    text-align: center; }
+    .about .titulofinal h3 {
+      text-shadow: 5px 5px 5px black;
+      font-size: 4.5rem; }
+  .about .animate__bounce {
+    animation-duration: 8s; }
