@@ -1,0 +1,9 @@
+body{
+    display: grid;
+    color: white;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    height: 100%;
+}

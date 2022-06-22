@@ -1,12 +1,25 @@
+/* GENERALES */
 @import "./partials/reset.scss";
 @import "./partials/headerynav";
-@import "./partials/variables";
+@import "./partials/main";
 @import "./partials/footer";
+@import "./partials/variables";
+
+/* ABOUT */
 @import "./partials/aboutus/logoabout";
 @import "./partials/aboutus/parrafo";
 
+/* INDEX */
 
+/* NEXT-CONCERT */
+
+/* CONTACTO */
+
+/* DISCOVER */
+
+/* ABOUT US */
 .about{
+    grid-area: main;
     width: 100%;
     background:linear-gradient(
         0deg,
