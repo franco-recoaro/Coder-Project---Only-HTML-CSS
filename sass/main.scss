@@ -1,9 +1,9 @@
 @import "./partials/reset.scss";
 @import "./partials/headerynav";
 @import "./partials/variables";
-@import "./partials/logoabout";
-@import "./partials/parrafo";
 @import "./partials/footer";
+@import "./partials/aboutus/logoabout";
+@import "./partials/aboutus/parrafo";
 
 
 .about{
@@ -26,7 +26,6 @@
     padding: 30px;
     
     /* BANDAS COLABORACIONES */
-
     .bandas{
         grid-area: imagen2;
         width: 100%;
@@ -47,30 +46,24 @@
             font-size: 2rem;
             text-shadow: 10px 5px 5px black;
             align-self: center;
-            justify-self: center; }
+            justify-self: center;}
+            img{
+                justify-self: center;
+            }
         .imagencolab1{
-            grid-area: banda1;
-            justify-self: center;}
+            grid-area: banda1;}
         .imagencolab2{
-            grid-area: banda2;
-            justify-self: center;}
+            grid-area: banda2;}
         .imagencolab3{
-            grid-area: banda3;
-            justify-self: center;}
+            grid-area: banda3;}
         .imagencolab4{
-            grid-area: banda4;
-            justify-self: center;}
+            grid-area: banda4;}
         .imagencolab5{
-            grid-area: banda5;
-            justify-self: center; 
-        }
+            grid-area: banda5;}
         .imagencolab6{
-            grid-area: banda6;
-            justify-self: center;} 
+            grid-area: banda6;} 
     }
-
     /* TITULO FINAL */
-    
     .titulofinal{
         grid-area: titulo;
         justify-items: center;
@@ -81,7 +74,6 @@
             font-size: 4.5rem;
         }
     }
-    
     .animate__bounce{
         animation-duration: 8s;
     }
