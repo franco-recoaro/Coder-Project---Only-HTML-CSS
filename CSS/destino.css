@@ -280,9 +280,8 @@ footer {
   opacity: 1; }
   .card img {
     background-size: cover; }
-
-.card:hover {
-  opacity: 0.5; }
+  .card:hover {
+    opacity: 0.5; }
 
 /*EXPERIENCIAS */
 .exp {
