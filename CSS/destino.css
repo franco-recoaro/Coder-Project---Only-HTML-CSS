@@ -130,6 +130,7 @@ footer {
     align-items: center;
     width: 100%;
     height: 100%;
+    /*incluyo mixin*/
     display: flex;
     flex-direction: column;
     padding: 1px;
@@ -142,12 +143,18 @@ footer {
     align-items: center;
     width: 100%;
     height: 100%;
+    /*incluyo mixin*/
     gap: 30px; }
 
 /* TITULO FINAL */
 .titulofinal {
   grid-area: titulo;
-  justify-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /*incluyo mixin*/
   align-self: center;
   text-align: center; }
   .titulofinal h3 {
@@ -210,6 +217,7 @@ footer {
   align-items: center;
   width: 100%;
   height: 100%;
+  /*incluyo mixin*/
   box-shadow: 0 2px 2px black;
   border: 0px solid black;
   border-radius: 10px; }

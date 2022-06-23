@@ -46,17 +46,16 @@
         flex-direction: column;
         padding: 10px;
         &__titulo{
-            @include Centroalturayancho;
+            @include Centroalturayancho; /*incluyo mixin*/
             display: flex;
             flex-direction: column;
             padding: 1px;
             text-shadow: 10px 5px 5px black;
             h3{
-                font-size: 3rem;
-            }
+            font-size: 3rem;}
             }
             &__imagenes{
-                @include Centroalturayancho;
+                @include Centroalturayancho; /*incluyo mixin*/
                 gap: 30px;    
             }
     }
@@ -64,7 +63,7 @@
     /* TITULO FINAL */
     .titulofinal{
         grid-area: titulo;
-        justify-items: center;
+        @include Centroalturayancho; /*incluyo mixin*/
         align-self: center;
         text-align: center;
         h3{
@@ -137,7 +136,7 @@
     }
 
     .cartas{
-        @include Centroalturayancho;
+        @include Centroalturayancho; /*incluyo mixin*/
         box-shadow: 0 2px 2px black;
         border: 0px solid black;
         border-radius: 10px;
@@ -154,8 +153,7 @@
         background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/#{$carta}.jpg);
        background-size: cover;
        font-size: 2rem;
-       grid-area: #{$carta};
-        }
+       grid-area: #{$carta};}
         }
 
         .publicidad{
@@ -205,15 +203,12 @@
         background-size: cover;}
         &:hover{
             opacity:0.5;}
-            
 }
-
-
 /*EXPERIENCIAS */
 .exp{
     padding: 50px;
     width: 100%;
     img{
-        border-radius: 200px;
-    }
+        border-radius: 200px;}
 }
+
