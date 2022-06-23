@@ -53,16 +53,13 @@ footer {
   display: flex;
   grid-area: footer;
   height: 6rem;
-  background: #41076a;
-  background: -moz-linear-gradient(87deg, #41076a 0%, #6b1e84 47%, #19003e 100%);
-  background: -webkit-linear-gradient(87deg, #41076a 0%, #6b1e84 47%, #19003e 100%);
-  background: linear-gradient(87deg, #41076a 0%, #6b1e84 47%, #19003e 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#41076a",endColorstr="#19003e",GradientType=1);
-  justify-content: center;
-  font-size: 1rem; }
+  background: #212529;
+  font-size: 1rem;
+  justify-content: center; }
   footer h3 {
     padding: 10px;
-    color: white; }
+    color: white;
+    align-self: center; }
 
 /*Mixins*/
 /* ABOUT */
@@ -164,7 +161,7 @@ footer {
 .animate__bounce {
   animation-duration: 8s; }
 
-/* INDEX CON GRID*/
+/*--INDEX CON GRID--*/
 .hero {
   display: grid;
   grid-area: main;
@@ -274,7 +271,7 @@ footer {
       text-decoration: none;
       color: white; }
 
-/* NEXT-CONCERT */
+/*-- NEXT-CONCERT-- */
 .nextconcert {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/nextconcert.jpg);
   background-repeat: no-repeat;
@@ -297,3 +294,116 @@ footer {
   width: 100%; }
   .exp img {
     border-radius: 200px; }
+
+/*--CONTACTO--*/
+.contacto {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/aboutUs.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%; }
+  .contacto h2 {
+    font-size: 4.5rem;
+    text-shadow: 4px 1px 1px black; }
+  .contacto_lista ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    height: max-content; }
+
+.animate__jackInTheBox {
+  animation-duration: 2s; }
+
+/*--DESCUBRE--*/
+.descubre {
+  background-color: burlywood;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-areas: "box0des box0des" "box1des box1des" "box2des box2des" "box3des box3des";
+  height: 100%;
+  width: 100%; }
+
+/*MAP GET TITULOS*/
+.box0 {
+  grid-area: box0des;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/discover0.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 400px; }
+  .box0__titulo {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    padding: 30px;
+    font-size: 2rem;
+    text-shadow: 10px 5px 5px black;
+    text-align: left; }
+  .box0__video, .box1__video, .box2__video, .box3__video {
+    display: flex;
+    padding: 10px;
+    align-items: center; }
+  .box0__parrafo, .box1__parrafo, .box2__parrafo, .box3__parrafo {
+    align-self: center;
+    padding: 50px; }
+
+.box1 {
+  grid-area: box1des;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/discover1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  height: 400px; }
+  .box1__titulo {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    padding: 30px;
+    font-size: 2rem;
+    text-shadow: 10px 5px 5px black;
+    text-align: center; }
+
+.box2 {
+  grid-area: box2des;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/discover2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 400px; }
+  .box2__titulo {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    padding: 30px;
+    font-size: 2rem;
+    text-shadow: 10px 5px 5px black;
+    text-align: left; }
+
+.box3 {
+  grid-area: box3des;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/discover3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  height: 400px; }
+  .box3__titulo {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    padding: 30px;
+    font-size: 2rem;
+    text-shadow: 10px 5px 5px black;
+    text-align: center; }

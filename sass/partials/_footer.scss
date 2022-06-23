@@ -2,15 +2,12 @@ footer{
     display: flex;
     grid-area: footer;
     height: 6rem;
-    background: rgb(65,7,106);
-background: -moz-linear-gradient(87deg, rgba(65,7,106,1) 0%, rgba(107,30,132,1) 47%, rgba(25,0,62,1) 100%);
-background: -webkit-linear-gradient(87deg, rgba(65,7,106,1) 0%, rgba(107,30,132,1) 47%, rgba(25,0,62,1) 100%);
-background: linear-gradient(87deg, rgba(65,7,106,1) 0%, rgba(107,30,132,1) 47%, rgba(25,0,62,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#41076a",endColorstr="#19003e",GradientType=1);
-    justify-content: center;
+    background: #212529;
     font-size: 1rem;
+    justify-content: center;
  h3{
-        padding: 10px;
-        color: white;
+    padding: 10px;
+    color: white;
+    align-self: center;
     }
 }

@@ -365,13 +365,16 @@ transform: scale(1.1);
     background-size: cover;
     width: 100%;
     height: 100%;
-}
-
-/* TITULO 1 PRINCIPAL */
-
-.contacto__titulo1 h2{
-    font-size: 4.5rem;
-    text-shadow: 4px 1px 1px black;
+    h2{
+        font-size: 4.5rem;
+        text-shadow: 4px 1px 1px black;
+    }
+    &_lista ul{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        height:max-content;
+    }
 }
 
 .animate__jackInTheBox{
@@ -380,12 +383,7 @@ transform: scale(1.1);
 
 /* FORMULARIO */
 
-.contacto_form_lista ul{
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    height:max-content;
-}
+
 
 
 
