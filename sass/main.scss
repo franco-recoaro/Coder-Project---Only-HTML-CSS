@@ -83,8 +83,6 @@ h2{
     .animate__bounce{
         animation-duration: 8s;} 
 
-
-
 /*--INDEX CON GRID--*/
 .hero{
     display: grid;
@@ -239,8 +237,7 @@ h2{
     height: 100%;
     h2{
         font-size: 4.5rem;
-        text-shadow: 4px 1px 1px black;
-    }
+        text-shadow: 4px 1px 1px black;}
     &_lista ul{
         display: flex;
         flex-direction: column;
@@ -254,6 +251,7 @@ h2{
 .animate__jackInTheBox{
     animation-duration: 2s;}
     
+
 /*--DESCUBRE--*/
 .descubre{
     background-color: burlywood;
@@ -334,9 +332,9 @@ $titulo:(
         text-shadow: map-get($titulo, sombra-t);
         text-align: center;}
     &__video{ /*se aplica extend*/
-        @extend .box0__video} 
+        @extend .box0__video;} 
     &__parrafo{
-        @extend .box0__parrafo}
+        @extend .box0__parrafo;}
 }
 
 .box2{
@@ -362,9 +360,9 @@ $titulo:(
         text-shadow: map-get($titulo, sombra-t);
         text-align: left;}
     &__video{ /*se aplica extend*/
-        @extend .box0__video}
+        @extend .box0__video;}
     &__parrafo{
-        @extend .box0__parrafo}
+        @extend .box0__parrafo;}
 }
 
 .box3{
@@ -390,7 +388,7 @@ $titulo:(
         text-shadow: map-get($titulo, sombra-t);
         text-align: center;}
     &__video{ /*se aplica extend*/
-        @extend .box0__video}
+        @extend .box0__video;}
     &__parrafo{
-        @extend .box0__parrafo}
+        @extend .box0__parrafo;}
 }
