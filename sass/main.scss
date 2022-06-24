@@ -1,9 +1,14 @@
 /* GENERALES */
 @import "./partials/reset.scss";
+
 @import "./partials/headerynav";
-@import "./partials/main";
+
+@import "./partials/body";
+
 @import "./partials/footer";
+
 @import "./partials/variables";
+
 
 /*Mixins*/
 @mixin Centroalturayancho{
@@ -17,7 +22,7 @@
 @import "./partials/aboutus/logoabout";
 @import "./partials/aboutus/parrafo";
 
-/* ABOUT US */
+/*--ABOUT US--*/
 .about{
     grid-area: main;
     width: 100%;
@@ -36,9 +41,15 @@
     "parrafo parrafo"
     "imagen2 imagen2"
     "titulo titulo";
-    padding: 30px;}
-    
-    /* BANDAS COLABORACIONES */
+    padding: 30px;
+    p{
+        text-shadow: 1px 1px 10px black;}
+}
+h2{
+    padding: 10px;}
+
+
+    /*BANDAS COLABORACIONES*/
     .bandas{
         grid-area: imagen2;
         width: 100%;
@@ -58,7 +69,8 @@
                 @include Centroalturayancho; /*incluyo mixin*/
                 gap: 30px;}
     }
-    /* TITULO FINAL */
+
+    /*TITULO FINAL*/
     .titulofinal{
         grid-area: titulo;
         @include Centroalturayancho; /*incluyo mixin*/
@@ -70,6 +82,7 @@
     }
     .animate__bounce{
         animation-duration: 8s;} 
+
 
 
 /*--INDEX CON GRID--*/
@@ -107,13 +120,15 @@
         display: flex;
         align-items: center;
         gap: 5px; }
+        h1{
+            font-size: 2rem;
+        }
     &__minititulo{
         text-shadow: 1px 1px 10px black;
         display: flex;
         align-items: center;
         h2{
-            font-size: 1rem;
-        }
+        font-size: 1rem;}
     }
 }
 
@@ -144,7 +159,6 @@
             text-shadow: 1px 1px 1px black;}
         }
     
-    
     /*EACH PARA LAS CARTAS */
     @each $carta in carta1, carta2, carta3, carta4{
         .#{$carta}{
@@ -155,7 +169,7 @@
         }
 
         .publicidad{
-            @include Centroalturayancho;
+            @include Centroalturayancho; /*incluyo mixin*/
             flex-direction: column;
             grid-area: publicidad;
             background-image: linear-gradient(
@@ -180,6 +194,7 @@
                      color: white;}
                      }
                     }
+
 
 /*-- NEXT-CONCERT-- */
 .nextconcert{
@@ -210,6 +225,7 @@
         border-radius: 200px;}
 }
 
+
 /*--CONTACTO--*/
 .contacto{
     background-image: linear-gradient(
@@ -229,7 +245,11 @@
         display: flex;
         flex-direction: column;
         list-style: none;
-        height:max-content;}
+        height:max-content;
+    li p{
+        font-size: 20px;
+    }
+    }
 }
 .animate__jackInTheBox{
     animation-duration: 2s;}
@@ -244,8 +264,7 @@
     "box0des box0des"
     "box1des box1des"
     "box2des box2des"
-    "box3des box3des" 
-    ;
+    "box3des box3des";
     height: 100%;
     width: 100%;
 }
@@ -274,7 +293,7 @@ $titulo:(
     justify-content: space-around;
     height: 400px;
     &__titulo{
-        display: map-get($titulo, display);
+        display: map-get($titulo, display); /*Creacion de map get*/
         justify-self: map-get($titulo, centrado-h);
         align-self: map-get($titulo, centrado-v);
         padding: map-get($titulo, pad);
@@ -286,8 +305,10 @@ $titulo:(
         padding: 10px;
         align-items: center;}
     &__parrafo{
+        font-size: 20px;
        align-self: center;
-       padding: 50px;}    
+       padding: 50px;
+       text-shadow: 1px 1px 10px black;}    
 }
 
 .box1{
@@ -305,15 +326,15 @@ $titulo:(
     justify-content: space-around;
     height: 400px;
     &__titulo{
-        display: map-get($titulo, display);
+        display: map-get($titulo, display); /*se aplica mapget*/
         justify-self: map-get($titulo, centrado-h);
         align-self: map-get($titulo, centrado-v);
         padding: map-get($titulo, pad);
         font-size: map-get($titulo, tamaño-t);
         text-shadow: map-get($titulo, sombra-t);
         text-align: center;}
-    &__video{
-        @extend .box0__video}
+    &__video{ /*se aplica extend*/
+        @extend .box0__video} 
     &__parrafo{
         @extend .box0__parrafo}
 }
@@ -333,14 +354,14 @@ $titulo:(
     justify-content: space-around;
     height: 400px;
     &__titulo{
-        display: map-get($titulo, display);
+        display: map-get($titulo, display); /*se aplica mapget*/
         justify-self: map-get($titulo, centrado-h);
         align-self: map-get($titulo, centrado-v);
         padding: map-get($titulo, pad);
         font-size: map-get($titulo, tamaño-t);
         text-shadow: map-get($titulo, sombra-t);
         text-align: left;}
-    &__video{
+    &__video{ /*se aplica extend*/
         @extend .box0__video}
     &__parrafo{
         @extend .box0__parrafo}
@@ -361,14 +382,14 @@ $titulo:(
     justify-content: space-around;
     height: 400px;
     &__titulo{
-        display: map-get($titulo, display);
+        display: map-get($titulo, display); /*se aplica mapget*/
         justify-self: map-get($titulo, centrado-h);
         align-self: map-get($titulo, centrado-v);
         padding: map-get($titulo, pad);
         font-size: map-get($titulo, tamaño-t);
         text-shadow: map-get($titulo, sombra-t);
         text-align: center;}
-    &__video{
+    &__video{ /*se aplica extend*/
         @extend .box0__video}
     &__parrafo{
         @extend .box0__parrafo}

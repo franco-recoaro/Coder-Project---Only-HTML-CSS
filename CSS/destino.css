@@ -15,6 +15,14 @@
 
 /* ENCABEZADO DONDE ESTAN EL LOGO Y NAV */
 /*LOGO MIKITECK*/
+@media screen and (max-width: 767px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+  .header__logo {
+    align-self: center; } }
+
 .logo {
   position: relative;
   transform: rotate(160deg);
@@ -48,6 +56,10 @@ body {
   color: white;
   grid-template-areas: "header" "main" "footer";
   height: 100%; }
+  @media screen and (max-width: 767px) {
+    body body {
+      width: 100%;
+      height: 100%; } }
 
 footer {
   display: flex;
@@ -101,7 +113,7 @@ footer {
     width: 100%;
     height: 100%; }
 
-/* ABOUT US */
+/*--ABOUT US--*/
 .about {
   grid-area: main;
   width: 100%;
@@ -113,8 +125,13 @@ footer {
   grid-template-rows: 10% 1fr 1fr 1fr;
   grid-template-areas: "imagen1 imagen1" "parrafo parrafo" "imagen2 imagen2" "titulo titulo";
   padding: 30px; }
+  .about p {
+    text-shadow: 1px 1px 10px black; }
 
-/* BANDAS COLABORACIONES */
+h2 {
+  padding: 10px; }
+
+/*BANDAS COLABORACIONES*/
 .bandas {
   grid-area: imagen2;
   width: 100%;
@@ -143,7 +160,7 @@ footer {
     /*incluyo mixin*/
     gap: 30px; }
 
-/* TITULO FINAL */
+/*TITULO FINAL*/
 .titulofinal {
   grid-area: titulo;
   display: flex;
@@ -188,6 +205,8 @@ footer {
     display: flex;
     align-items: center;
     gap: 5px; }
+  .contenedor h1 {
+    font-size: 2rem; }
   .contenedor__minititulo {
     text-shadow: 1px 1px 10px black;
     display: flex;
@@ -254,6 +273,7 @@ footer {
   align-items: center;
   width: 100%;
   height: 100%;
+  /*incluyo mixin*/
   flex-direction: column;
   grid-area: publicidad;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../imagenes/Aside.jpg);
@@ -310,6 +330,8 @@ footer {
     flex-direction: column;
     list-style: none;
     height: max-content; }
+    .contacto_lista ul li p {
+      font-size: 20px; }
 
 .animate__jackInTheBox {
   animation-duration: 2s; }
@@ -337,6 +359,7 @@ footer {
   height: 400px; }
   .box0__titulo {
     display: flex;
+    /*Creacion de map get*/
     justify-self: center;
     align-self: center;
     padding: 30px;
@@ -348,8 +371,10 @@ footer {
     padding: 10px;
     align-items: center; }
   .box0__parrafo, .box1__parrafo, .box2__parrafo, .box3__parrafo {
+    font-size: 20px;
     align-self: center;
-    padding: 50px; }
+    padding: 50px;
+    text-shadow: 1px 1px 10px black; }
 
 .box1 {
   grid-area: box1des;
@@ -363,12 +388,15 @@ footer {
   height: 400px; }
   .box1__titulo {
     display: flex;
+    /*se aplica mapget*/
     justify-self: center;
     align-self: center;
     padding: 30px;
     font-size: 2rem;
     text-shadow: 10px 5px 5px black;
     text-align: center; }
+  .box1__video {
+    /*se aplica extend*/ }
 
 .box2 {
   grid-area: box2des;
@@ -382,12 +410,15 @@ footer {
   height: 400px; }
   .box2__titulo {
     display: flex;
+    /*se aplica mapget*/
     justify-self: center;
     align-self: center;
     padding: 30px;
     font-size: 2rem;
     text-shadow: 10px 5px 5px black;
     text-align: left; }
+  .box2__video {
+    /*se aplica extend*/ }
 
 .box3 {
   grid-area: box3des;
@@ -401,9 +432,12 @@ footer {
   height: 400px; }
   .box3__titulo {
     display: flex;
+    /*se aplica mapget*/
     justify-self: center;
     align-self: center;
     padding: 30px;
     font-size: 2rem;
     text-shadow: 10px 5px 5px black;
     text-align: center; }
+  .box3__video {
+    /*se aplica extend*/ }

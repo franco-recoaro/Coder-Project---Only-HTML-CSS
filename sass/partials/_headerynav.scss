@@ -11,7 +11,15 @@
 
 /* ENCABEZADO DONDE ESTAN EL LOGO Y NAV */
 /*LOGO MIKITECK*/
-.logo{
+@media screen and (max-width: 767px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        width: 100%;}
+    .header__logo{
+        align-self: center;}  
+}
+    .logo{
     position: relative;
     transform: rotate(160deg);
     image-rendering:optimizeQuality;
