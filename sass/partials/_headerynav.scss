@@ -11,16 +11,16 @@
 
 /* ENCABEZADO DONDE ESTAN EL LOGO Y NAV */
 /*LOGO MIKITECK*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     header{
         display: flex;
         flex-direction: column;
-        width: 100%;}
+        width: 100%;
+    }
     .header__logo{
         align-self: center;}  
 }
     .logo{
-    position: relative;
     transform: rotate(160deg);
     image-rendering:optimizeQuality;
     height: 20px;
@@ -32,28 +32,22 @@
 h1{
     color: white;
     font-size: 1.8rem;
-    position: relative;}
 h1:hover{
-    color: gray;
-}
-}
-/* BARRA NAVEGADOR */
+    color: gray;}
+}}
 
+/* BARRA NAVEGADOR */
 nav ul{
     display: flex;
     list-style: none;
-    
     li{
         margin: 10px;
-        font-size: 1rem;
-    }
+        font-size: 1rem;}
     
     li a{
         text-decoration: none;
-        color:white;
-    }
+        color:white;}
     
     li a:hover{
-        color: gray;
-    }
+        color: gray;}
 }

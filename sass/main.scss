@@ -18,6 +18,18 @@
     width: 100%;
     height: 100%}
 
+@mixin mediamovil ($media: 768px) {
+    @media screen and (max-width: $media){
+        @content;
+    }
+}
+
+@mixin mediatablet ($media: 768px) {
+    @media screen and (min-width: $media){
+        @content;
+    }
+}
+
 /* ABOUT */
 @import "./partials/aboutus/logoabout";
 @import "./partials/aboutus/parrafo";
@@ -45,14 +57,17 @@
     p{
     margin-top: 10px;
     padding: 10px;
-    text-shadow: 1px 1px 10px black;
+    text-shadow: 1px 1px 10px black;}
+    /*media query*/
+    @include mediamovil(768px){ 
+        display: flex;
+        flex-direction: column;
+    hr{
+        display: none;}
     }
 }
 
-
-h2{
-    padding: 10px;}
-
+h2{padding: 10px;}
 
     /*BANDAS COLABORACIONES*/
     .bandas{
@@ -68,12 +83,21 @@ h2{
             padding: 1px;
             text-shadow: 10px 5px 5px black;
             h3{
-            font-size: 3rem;}
+                font-size: 3rem;}
             }
             &__imagenes{
-                @include Centroalturayancho; /*incluyo mixin*/
+            @include Centroalturayancho; /*incluyo mixin*/
                 gap: 30px;}
-    }
+            /*media query*/
+            @include mediamovil(768px){  
+                display: flex;
+                flex-direction: column;
+                &__imagenes{
+                    display: flex;
+                    flex-direction: column;}
+            }
+            }
+    
 
     /*TITULO FINAL*/
     .titulofinal{
@@ -84,6 +108,9 @@ h2{
         h3{
             text-shadow: 5px 5px 5px black;
             font-size: 4.5rem;}
+            @include mediamovil(768px){ /*media query*/
+                padding-top: 50px;
+            }
     }
     .animate__bounce{
         animation-duration: 8s;} 
@@ -109,6 +136,10 @@ h2{
     ),url(../imagenes/imagenhero.jpg);
     background-size: cover;
     padding: 5rem;
+    @include mediamovil(768px){
+        height: 100%;
+        width: 100%;
+    }
 }
 
 /* TITULO PRINCIPAL*/ 
@@ -146,6 +177,14 @@ h2{
     height: 50vh;
     width: 100%;
     gap: 5px;
+    /*media query*/
+    @include mediamovil(768px){
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;}
+    @include mediatablet(768px){ 
+        text-align: center;}
     a{
         text-decoration: none;
         color: white;}
@@ -160,7 +199,11 @@ h2{
                 transform: scale(1.1);}
         h3{
             text-shadow: 1px 1px 1px black;}
-        }
+            /*media query*/
+            @include mediamovil(768px){
+                text-align: center;
+                height: 100px;}
+            }
     
     /*EACH PARA LAS CARTAS */
     @each $carta in carta1, carta2, carta3, carta4{
@@ -168,7 +211,11 @@ h2{
         background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/#{$carta}.jpg);
        background-size: cover;
        font-size: 2rem;
-       grid-area: #{$carta};}
+       grid-area: #{$carta};
+       /*media query*/
+       @include mediamovil(768px){
+        text-align: center;}
+    }
         }
 
         .publicidad{
@@ -196,6 +243,10 @@ h2{
                     text-decoration: none;
                      color: white;}
                      }
+                     /*media query*/
+                     @include mediamovil(768px){
+                        height: 100px;
+                        padding: 10px;}
                     }
 
 
@@ -212,7 +263,8 @@ h2{
     height: 100%;
     &__titulo h2{
         font-size: 6rem;}
-}
+    }
+
 .card{
     opacity: 1;
     img{
@@ -270,7 +322,21 @@ h2{
     "box3des box3des";
     height: 100%;
     width: 100%;
-}
+    /*media query*/
+    @include mediamovil(768px){
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "lola"
+    "tomorrow"
+    "rock"
+    "cream"
+    ;
+    width: 100%;
+    height: 100%;}
+    }
+    
+
 
 /*MAP GET TITULOS*/
 $titulo:(
@@ -280,6 +346,7 @@ $titulo:(
         pad: 30px,
         tamaño-t: 2rem,
         sombra-t: 10px 5px 5px black);
+
 
 .box0{
     grid-area: box0des;
@@ -311,8 +378,19 @@ $titulo:(
         font-size: 20px;
        align-self: center;
        padding: 50px;
-       text-shadow: 1px 1px 10px black;}    
-}
+       text-shadow: 1px 1px 10px black;}
+       /*media query*/
+       @include mediamovil(768px){
+        grid-area: lola;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+       }
+       }  
+
 
 .box1{
     grid-area: box1des;
@@ -340,6 +418,15 @@ $titulo:(
         @extend .box0__video;} 
     &__parrafo{
         @extend .box0__parrafo;}
+        /*media query*/
+        @include mediamovil(768px){
+        grid-area: tomorrow;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        width: 100%;}
 }
 
 .box2{
@@ -368,6 +455,15 @@ $titulo:(
         @extend .box0__video;}
     &__parrafo{
         @extend .box0__parrafo;}
+        /*media query*/
+        @include mediamovil(768px){
+            grid-area: rock;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            width: 100%;}
 }
 
 .box3{
@@ -396,4 +492,14 @@ $titulo:(
         @extend .box0__video;}
     &__parrafo{
         @extend .box0__parrafo;}
+        /*media query*/
+        @include mediamovil(768px){
+            grid-area: cream;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+    }
 }

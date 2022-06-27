@@ -25,4 +25,8 @@
         top: 100px;
         right: 100px;
     }
+    @include mediamovil (768px){
+        grid-area: aboutlogo;
+        position: relative;
+        right: 250px;}
     }

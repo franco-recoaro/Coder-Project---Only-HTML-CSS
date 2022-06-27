@@ -15,7 +15,7 @@
 
 /* ENCABEZADO DONDE ESTAN EL LOGO Y NAV */
 /*LOGO MIKITECK*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   header {
     display: flex;
     flex-direction: column;
@@ -24,7 +24,6 @@
     align-self: center; } }
 
 .logo {
-  position: relative;
   transform: rotate(160deg);
   image-rendering: optimizeQuality;
   height: 20px; }
@@ -33,10 +32,9 @@
   text-decoration: none; }
   .linknav h1 {
     color: white;
-    font-size: 1.8rem;
-    position: relative; }
-  .linknav h1:hover {
-    color: gray; }
+    font-size: 1.8rem; }
+    .linknav h1 h1:hover {
+      color: gray; }
 
 /* BARRA NAVEGADOR */
 nav ul {
@@ -56,7 +54,7 @@ body {
   color: white;
   grid-template-areas: "header" "main" "footer";
   height: 100%; }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     body body {
       width: 100%;
       height: 100%; } }
@@ -99,6 +97,11 @@ footer {
     position: relative;
     top: 100px;
     right: 100px; }
+  @media screen and (max-width: 768px) {
+    .logoabout {
+      grid-area: aboutlogo;
+      position: relative;
+      right: 250px; } }
 
 .parrafo {
   display: flex;
@@ -124,11 +127,18 @@ footer {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 10% 1fr 1fr 1fr;
   grid-template-areas: "imagen1 imagen1" "parrafo parrafo" "imagen2 imagen2" "titulo titulo";
-  padding: 30px; }
+  padding: 30px;
+  /*media query*/ }
   .about p {
     margin-top: 10px;
     padding: 10px;
     text-shadow: 1px 1px 10px black; }
+  @media screen and (max-width: 768px) {
+    .about {
+      display: flex;
+      flex-direction: column; }
+      .about hr {
+        display: none; } }
 
 h2 {
   padding: 10px; }
@@ -139,7 +149,8 @@ h2 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 10px; }
+  padding: 10px;
+  /*media query*/ }
   .bandas__titulo {
     display: flex;
     justify-content: center;
@@ -161,6 +172,13 @@ h2 {
     height: 100%;
     /*incluyo mixin*/
     gap: 30px; }
+  @media screen and (max-width: 768px) {
+    .bandas {
+      display: flex;
+      flex-direction: column; }
+      .bandas__imagenes {
+        display: flex;
+        flex-direction: column; } }
 
 /*TITULO FINAL*/
 .titulofinal {
@@ -176,6 +194,10 @@ h2 {
   .titulofinal h3 {
     text-shadow: 5px 5px 5px black;
     font-size: 4.5rem; }
+  @media screen and (max-width: 768px) {
+    .titulofinal {
+      /*media query*/
+      padding-top: 50px; } }
 
 .animate__bounce {
   animation-duration: 8s; }
@@ -194,6 +216,10 @@ h2 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/imagenhero.jpg);
   background-size: cover;
   padding: 5rem; }
+  @media screen and (max-width: 768px) {
+    .hero {
+      height: 100%;
+      width: 100%; } }
 
 /* TITULO PRINCIPAL*/
 .contenedor {
@@ -224,7 +250,17 @@ h2 {
   grid-template-areas: "carta1 carta2 publicidad" "carta3 carta4 publicidad";
   height: 50vh;
   width: 100%;
-  gap: 5px; }
+  gap: 5px;
+  /*media query*/ }
+  @media screen and (max-width: 768px) {
+    .contenedor__cartas {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%; } }
+  @media screen and (min-width: 768px) {
+    .contenedor__cartas {
+      text-align: center; } }
   .contenedor__cartas a {
     text-decoration: none;
     color: white; }
@@ -238,36 +274,57 @@ h2 {
   /*incluyo mixin*/
   box-shadow: 0 2px 2px black;
   border: 0px solid black;
-  border-radius: 10px; }
+  border-radius: 10px;
+  /*media query*/ }
   .cartas:hover {
     transform: scale(1.1); }
   .cartas h3 {
     text-shadow: 1px 1px 1px black; }
+  @media screen and (max-width: 768px) {
+    .cartas {
+      text-align: center;
+      height: 100px; } }
 
 /*EACH PARA LAS CARTAS */
 .carta1 {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/carta1.jpg);
   background-size: cover;
   font-size: 2rem;
-  grid-area: carta1; }
+  grid-area: carta1;
+  /*media query*/ }
+  @media screen and (max-width: 768px) {
+    .carta1 {
+      text-align: center; } }
 
 .carta2 {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/carta2.jpg);
   background-size: cover;
   font-size: 2rem;
-  grid-area: carta2; }
+  grid-area: carta2;
+  /*media query*/ }
+  @media screen and (max-width: 768px) {
+    .carta2 {
+      text-align: center; } }
 
 .carta3 {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/carta3.jpg);
   background-size: cover;
   font-size: 2rem;
-  grid-area: carta3; }
+  grid-area: carta3;
+  /*media query*/ }
+  @media screen and (max-width: 768px) {
+    .carta3 {
+      text-align: center; } }
 
 .carta4 {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/carta4.jpg);
   background-size: cover;
   font-size: 2rem;
-  grid-area: carta4; }
+  grid-area: carta4;
+  /*media query*/ }
+  @media screen and (max-width: 768px) {
+    .carta4 {
+      text-align: center; } }
 
 .publicidad {
   display: flex;
@@ -280,7 +337,8 @@ h2 {
   grid-area: publicidad;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../imagenes/Aside.jpg);
   border-radius: 10px;
-  box-shadow: 0 2px 2px black; }
+  box-shadow: 0 2px 2px black;
+  /*media query*/ }
   .publicidad:hover {
     transform: scale(1.1); }
   .publicidad h3 {
@@ -292,6 +350,10 @@ h2 {
     .publicidad__titulo a {
       text-decoration: none;
       color: white; }
+  @media screen and (max-width: 768px) {
+    .publicidad {
+      height: 100px;
+      padding: 10px; } }
 
 /*-- NEXT-CONCERT-- */
 .nextconcert {
@@ -346,7 +408,15 @@ h2 {
   grid-template-rows: 25% 25% 25% 25%;
   grid-template-areas: "box0des box0des" "box1des box1des" "box2des box2des" "box3des box3des";
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  /*media query*/ }
+  @media screen and (max-width: 768px) {
+    .descubre {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: "lola" "tomorrow" "rock" "cream";
+      width: 100%;
+      height: 100%; } }
 
 /*MAP GET TITULOS*/
 .box0 {
@@ -358,7 +428,8 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 400px; }
+  height: 400px;
+  /*media query*/ }
   .box0__titulo {
     display: flex;
     /*Creacion de map get*/
@@ -377,6 +448,15 @@ h2 {
     align-self: center;
     padding: 50px;
     text-shadow: 1px 1px 10px black; }
+  @media screen and (max-width: 768px) {
+    .box0 {
+      grid-area: lola;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+      width: 100%; } }
 
 .box1 {
   grid-area: box1des;
@@ -387,7 +467,8 @@ h2 {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
-  height: 400px; }
+  height: 400px;
+  /*media query*/ }
   .box1__titulo {
     display: flex;
     /*se aplica mapget*/
@@ -399,6 +480,15 @@ h2 {
     text-align: center; }
   .box1__video {
     /*se aplica extend*/ }
+  @media screen and (max-width: 768px) {
+    .box1 {
+      grid-area: tomorrow;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+      width: 100%; } }
 
 .box2 {
   grid-area: box2des;
@@ -409,7 +499,8 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 400px; }
+  height: 400px;
+  /*media query*/ }
   .box2__titulo {
     display: flex;
     /*se aplica mapget*/
@@ -421,6 +512,15 @@ h2 {
     text-align: left; }
   .box2__video {
     /*se aplica extend*/ }
+  @media screen and (max-width: 768px) {
+    .box2 {
+      grid-area: rock;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+      width: 100%; } }
 
 .box3 {
   grid-area: box3des;
@@ -431,7 +531,8 @@ h2 {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
-  height: 400px; }
+  height: 400px;
+  /*media query*/ }
   .box3__titulo {
     display: flex;
     /*se aplica mapget*/
@@ -443,3 +544,12 @@ h2 {
     text-align: center; }
   .box3__video {
     /*se aplica extend*/ }
+  @media screen and (max-width: 768px) {
+    .box3 {
+      grid-area: cream;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+      width: 100%; } }
