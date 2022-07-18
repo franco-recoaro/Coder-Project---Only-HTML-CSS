@@ -1,13 +1,72 @@
-footer{
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300);
+@mixin mediamovil ($media: 768px) {
+    @media screen and (max-width: $media){
+        @content;
+    }
+}
+
+
+@include mediamovil(768px){
     display: flex;
-    grid-area: footer;
-    height: 6rem;
-    background: #212529;
-    font-size: 1rem;
-    justify-content: center;
- h3{
+    flex-direction: column;}
+
+footer {
+  background-color: #292c2f;
+  color: #bbb;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.footer__contenedor{
     padding: 10px;
-    color: white;
-    align-self: center;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+}
+
+footer a {
+  color: #999;
+  text-decoration:none;
+}
+
+footer a:hover, footer a:focus {
+  color: #aaa;
+  text-decoration:none;
+  border-bottom:1px dotted #999;
+}
+
+footer .form-control {
+    background-color: #1f2022;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+    color: #d1d2d2;
+    padding: 0.7em 1em;
+}
+
+.contacto__numero{
+    font-size: 1rem;
+    padding: 0;
+}
+.contacto__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.contacto__ubicacion{
+    font-size: 1rem;
+    padding: 0;
+    display: flex;
+}
+
+.company{
+    text-align: center;
+    h3{
+        font-size: 16px;
     }
 }

@@ -1,4 +1,5 @@
 /* GENERALES */
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300);
 * {
   margin: 0;
   padding: 0;
@@ -59,17 +60,62 @@ body {
       width: 100%;
       height: 100%; } }
 
-footer {
+@media screen and (max-width: 768px) {
   display: flex;
-  grid-area: footer;
-  height: 6rem;
-  background: #212529;
+  flex-direction: column; }
+
+footer {
+  background-color: #292c2f;
+  color: #bbb;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; }
+
+.footer__contenedor {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  gap: 10px; }
+
+footer a {
+  color: #999;
+  text-decoration: none; }
+
+footer a:hover, footer a:focus {
+  color: #aaa;
+  text-decoration: none;
+  border-bottom: 1px dotted #999; }
+
+footer .form-control {
+  background-color: #1f2022;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  border: none;
+  resize: none;
+  color: #d1d2d2;
+  padding: 0.7em 1em; }
+
+.contacto__numero {
   font-size: 1rem;
-  justify-content: center; }
-  footer h3 {
-    padding: 10px;
-    color: white;
-    align-self: center; }
+  padding: 0; }
+
+.contacto__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; }
+
+.contacto__ubicacion {
+  font-size: 1rem;
+  padding: 0;
+  display: flex; }
+
+.company {
+  text-align: center; }
+  .company h3 {
+    font-size: 16px; }
 
 /*Mixins*/
 /* ABOUT */
@@ -120,6 +166,7 @@ footer {
 .about {
   grid-area: main;
   width: 100%;
+  height: 100%;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/imagencontact.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -161,7 +208,7 @@ h2 {
     display: flex;
     flex-direction: column;
     padding: 1px;
-    text-shadow: 10px 5px 5px black; }
+    text-shadow: 5px 5px 5px black; }
     .bandas__titulo h3 {
       font-size: 3rem; }
   .bandas__imagenes {
@@ -212,6 +259,7 @@ h2 {
   justify-content: center;
   align-content: center;
   width: 100%;
+  height: 100%;
   gap: 10px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/imagenhero.jpg);
   background-size: cover;
@@ -365,12 +413,19 @@ h2 {
   .nextconcert__titulo h2 {
     font-size: 6rem; }
 
-.card {
-  opacity: 1; }
-  .card img {
-    background-size: cover; }
-  .card:hover {
-    opacity: 0.5; }
+.cards {
+  box-shadow: 0 2px 2px black;
+  border: 1px solid black;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center; }
+  .cards img {
+    border-radius: 15px; }
+  @media screen and (max-width: 768px) {
+    .cards {
+      display: flex;
+      flex-direction: column;
+      margin-top: 5px; } }
 
 /*EXPERIENCIAS */
 .exp {
@@ -381,121 +436,121 @@ h2 {
 
 /*--CONTACTO--*/
 .contacto {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/aboutUs.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%; }
-  .contacto h2 {
-    font-size: 4.5rem;
-    text-shadow: 4px 1px 1px black; }
-  .contacto_lista ul {
+  @media screen and (max-width: 768px) {
+    .contacto {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%; } }
+  .contacto__principal {
+    background-image: url(../imagenes/aboutUs.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%; }
+  .contacto__titulo {
+    text-align: center;
+    height: 150px; }
+    .contacto__titulo__contenedor h1 {
+      position: relative;
+      top: 30px;
+      right: 20px;
+      text-shadow: 1px 1px 1px black; }
+
+.btn {
+  background-color: #413F42; }
+
+.btn:hover {
+  opacity: 0.5;
+  scale: 1.1; }
+
+.btn-block {
+  background-color: #413F42; }
+
+.btn-primary {
+  height: 100%; }
+
+@media screen and (max-width: 768px) {
+  .contacto__cards {
     display: flex;
     flex-direction: column;
-    list-style: none;
-    height: max-content; }
-    .contacto_lista ul li p {
-      font-size: 20px; }
+    justify-content: center;
+    align-items: center; } }
 
-.animate__jackInTheBox {
-  animation-duration: 2s; }
+.card {
+  padding: 30px 40px;
+  margin-top: 60px;
+  border: none !important;
+  box-shadow: 5px 6px 12px 10px rgba(0, 0, 0, 0.2);
+  color: black; }
 
-#contact {
-  width: 100%; }
-
-.section-header {
-  text-align: center;
-  text-shadow: 4px 1px 1px black;
-  margin: 0 auto;
-  padding: 40px 0;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 6px; }
-
-.contact-wrapper {
+.card-body1 {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 auto;
-  padding: 20px;
-  position: relative;
-  max-width: 840px; }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
-/* Left contact page */
-.form-horizontal {
-  /*float: left;*/
-  max-width: 400px;
+.blue-text {
+  color: white; }
+
+.form-control-label {
+  margin-bottom: 0; }
+
+input, textarea, button {
+  padding: 8px 15px;
+  border-radius: 5px !important;
+  margin: 5px 0px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  font-size: 18px !important;
+  font-weight: 300; }
+
+input:focus, textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #00BCD4;
+  outline-width: 0;
   font-weight: 400; }
 
-.form-control,
-textarea {
-  max-width: 400px;
-  background-color: #000;
-  color: #fff;
-  letter-spacing: 1px; }
+.btn-block {
+  text-transform: uppercase;
+  font-size: 15px !important;
+  font-weight: 400;
+  height: 43px;
+  cursor: pointer; }
 
-.send-button {
-  margin-top: 15px;
-  height: 34px;
-  width: 400px;
-  overflow: hidden;
-  transition: all .2s ease-in-out; }
+.btn-block:hover {
+  color: #fff !important; }
 
-.alt-send-button {
-  width: 400px;
-  height: 34px;
-  transition: all .2s ease-in-out; }
+button:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline-width: 0; }
 
-.send-text {
-  display: block;
-  letter-spacing: 2px;
-  text-align: center; }
+.contacto_cards {
+  height: 100px; }
 
-/* Begin Right Contact Page */
-.direct-contact-container {
-  max-width: 400px; }
-
-/* Location, Phone, Email Section */
-.contact-list {
-  list-style-type: none;
-  margin-left: -30px;
-  padding-right: 20px; }
-
-.list-item {
-  line-height: 4;
-  color: #aaa; }
-
-.contact-text {
-  font: 300 18px 'Lato', sans-serif;
-  letter-spacing: 1.9px;
-  color: #bbb; }
-
-.place {
-  margin-left: 62px; }
-
-.phone {
-  margin-left: 56px; }
-
-.gmail {
-  margin-left: 53px; }
-
-.contact-text a {
-  color: #bbb;
-  text-decoration: none;
-  transition-duration: 0.2s; }
-
-.contact-text a:hover {
-  color: #fff;
-  text-decoration: none; }
-
-.copyright {
-  font: 200 14px 'Oswald', sans-serif;
-  color: #555;
-  letter-spacing: 1px;
-  text-align: center; }
-
-hr {
-  border-color: rgba(255, 255, 255, 0.6); }
+.contacto__beneficios {
+  color: white;
+  background: #413F42;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px; }
+  @media screen and (max-width: 768px) {
+    .contacto__beneficios {
+      display: flex;
+      flex-direction: column; } }
+  .contacto__beneficios ul {
+    list-style: none; }
 
 /*--DESCUBRE--*/
 .descubre {
